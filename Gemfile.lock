@@ -24,6 +24,7 @@ GEM
     commonmarker (0.17.13)
       ruby-enum (~> 0.5)
     concurrent-ruby (1.1.5)
+    directory_watcher (1.4.0)
     dnsruby (1.61.5)
       simpleidn (~> 0.1)
     em-websocket (0.5.2)
@@ -278,6 +279,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  directory_watcher (= 1.4)
   html-proofer (~> 3.9)
   modern-resume-theme!
 
