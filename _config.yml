@@ -7,7 +7,7 @@ version: 2
 
 # Personal info
 name: 송지훈
-title: 시스템 엔지니어
+title: 주니어 개발자
 email: sjh9646@naver.com
 # email_title: Email (Email title override)
 phone: 010-9130-0723
@@ -40,7 +40,9 @@ additional_links:
 # about_title: About Me (Use this to override about section title)
 about_profile_image: images/profile.png
 about_content: | # this will include new lines to allow paragraphs
-  
+  시대에 발맞춰 나가는 주니어 개발자로 NodeJs / React / Java, AWS 기반의 개발자로 나아가고 있습니다.
+  현재는 소더코드의 시스템 엔지니어로 `시스템 개발 및 개선`을 담당하고 있으며 팀원과 주료 업무를 진행하며
+ ` 회사와 팀`에 도움이 되는 개발을 해야 한다는 생각을 가지고 있습니다.
 
 content:
 
@@ -106,7 +108,7 @@ content:
       - layout: top-middle
         title: 견고한 데이터 구조 및 애플리케이션 설계
         description: | # this will include new lines to allow paragraphs
-          - ERP 데이터 베이스 인덱스 트리 설계
+          - ERP 데이터 베이스 인덱싱 설계
           - 랭킹시스템을 위한 계정 테이블과 랭킹테이블 설계
           - JSON데이터 저장을 위한 NoSql 구성
 
