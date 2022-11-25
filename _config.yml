@@ -40,10 +40,10 @@ additional_links:
 # about_title: About Me (Use this to override about section title)
 about_profile_image: images/profile.png
 about_content: | # this will include new lines to allow paragraphs
-  시대에 발맞춰 나가는 주니어 개발자로 NodeJs / React / Java, AWS 기반의 개발자로 나아가고 있습니다.
-  현재는 소더코드의 <mark>시스템 엔지니어</mark>로 시스템 개발 및 개선을 담당하고 있으며 팀원과 주료 업무를 진행하며
-  <mark>회사와 팀</mark>에 도움이 되는 개발을 해야 한다는 생각을 가지고 있습니다.
-  또한 문제 해결을 즐겨하고 <mark>코드리뷰</mark>를 선호합니다.
+  시대에 발맞춰 나가는 주니어 개발자로 NodeJs / React / Java / PHP, AWS 기반의 개발자로 나아가고 있습니다.
+  현재는 소더코드의 <mark>시스템 엔지니어</mark>로 시스템 개발 및 개선을 담당하고 있으며,
+  팀원과 주료 업무를 진행하며 <mark>회사와 팀</mark>에 도움이 되는 개발을 해야 한다는 생각을 가지고 있습니다.
+  또한 <mark>문제 해결</mark>을 즐겨하고 <mark>코드리뷰</mark>를 선호합니다.
 
 content:
 
@@ -60,12 +60,16 @@ content:
           소더코드 주력 서비스
         description: | # this will include new lines to allow paragraphs
           - 투비롱 래거시 -> React 마이크레이션
-          - MQTTCLIENT, <mark>PUB/SUB 소스코드 리팩토링 개발</mark> 및 실서비스 배포 (AWS-MQTTCLIENT 이용)
+          - MQTTCLIENT, <mark>PUB/SUB</mark> 소스코드 리팩토링 개발 및 실서비스 배포 (AWS-MQTTCLIENT 이용)
           - ERP 시스템 서비스 풀스택 개발 <mark>주도</mark> (REACT / NodeJs-Express)
           - ERP 시스템 데이터베이스 설계
           - AWS EC2 서비스 배포 및 로드밸런싱 작업
+          - AWS Route 53 적용
           - 코드미터 알람 서비스 개발 및 적용
           - 코드미터 발주사(KCC, 국토도로공사) 실서비스 서브 개발
+
+          <mark>NodeJs</mark><mark>React</mark><mark>MySQL</mark><mark>AWS EC2</mark><mark>AWS Route 53</mark>
+          <mark>AWS Iot</mark><mark>Nginx</mark><mark>PM2</mark>
 
 
   - title: 역량
@@ -111,7 +115,7 @@ content:
         description: | # this will include new lines to allow paragraphs
           - ERP 데이터 베이스 인덱싱 설계
           - 랭킹시스템을 위한 계정 테이블과 랭킹테이블 설계
-          - JSON데이터 저장을 위한 NoSql 구성
+          - JSON데이터 저장을 위한 NoSQL 구성
 
   - title: Skill
     layout: list
