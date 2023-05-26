@@ -1,3 +1,12 @@
+const path = require(`path`)
+// Log out information after a build is done
+
+exports.onCreateDevServer = ({ app }) => {
+    app.get('/hello', function (req, res) {
+        res.send('hello world')
+    })
+}
+
 // // gatsby-node.js
 // const path = require("path")
 
