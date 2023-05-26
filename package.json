@@ -17,6 +17,7 @@
     "@mdx-js/react": "^2.3.0",
     "gatsby": "^5.10.0",
     "gatsby-plugin-page-creator": "^5.10.0",
+    "gatsby-remark-autolink-headers": "^6.10.0",
     "gatsby-remark-prismjs": "^7.10.0",
     "gatsby-source-filesystem": "^5.10.0",
     "gatsby-transformer-remark": "^6.10.0",

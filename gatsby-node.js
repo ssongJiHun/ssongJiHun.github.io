@@ -2,7 +2,6 @@ const path = require(`path`);
 
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions;
-
     const { data, errors } = await graphql(`
     {
         allMarkdownRemark {
@@ -19,7 +18,6 @@ exports.createPages = async ({ graphql, actions }) => {
     `);
 
     if (errors) throw errors; // error
-
     /*
         @params path : routing
         @params path : template
