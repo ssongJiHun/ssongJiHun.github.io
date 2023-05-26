@@ -1,46 +1,35 @@
-const path = require(`path`)
-// Log out information after a build is done
+const path = require(`path`);
 
-exports.onCreateDevServer = ({ app }) => {
-    app.get('/hello', function (req, res) {
-        res.send('hello world')
+exports.createPages = async ({ graphql, actions }) => {
+    const { createPage } = actions;
+
+    const { data, errors } = await graphql(`
+    {
+        allMarkdownRemark {
+            edges {
+                node {
+                    html
+                    frontmatter {
+                        title
+                    }
+                }
+            }
+        }
+    }
+    `);
+
+    if (errors) throw errors; // error
+
+    /*
+        @params path : routing
+        @params path : template
+        @params contxt : props
+    */
+    data.allMarkdownRemark.edges.forEach(({ node }) => {
+        createPage({
+            path: node.frontmatter.title,
+            component: path.resolve('./src/templates/master.template.jsx'),
+            context: {},
+        });
     })
-}
-
-// // gatsby-node.js
-// const path = require("path")
-
-// exports.createPages = ({ actions, graphql }) => {
-//   const { createPage } = actions
-
-//   const blogPostTemplate = path.resolve(`./src/templates/post-template.jsx`)
-
-//   return graphql(`
-//     {
-//       allMarkdownRemark(
-//         sort: { order: DESC, fields: [frontmatter___date] }
-//         limit: 1000
-//       ) {
-//         edges {
-//           node {
-//             frontmatter {
-//               path
-//             }
-//           }
-//         }
-//       }
-//     }
-//   `).then(result => {
-//     if (result.errors) {
-//       return Promise.reject(result.errors)
-//     }
-
-//     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-//       createPage({
-//         path: node.frontmatter.path,
-//         component: blogPostTemplate,
-//         context: {},
-//       })
-//     })
-//   })
-// }
+};

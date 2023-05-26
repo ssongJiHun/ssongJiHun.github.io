@@ -15,8 +15,16 @@ module.exports = {
   plugins: [
     {
       resolve: 'gatsby-source-filesystem',
-      options: { "name": "abouts", "path": './src/abouts' },
+      options: { "name": "abouts", "path": './src/pages' },
     },
-    "gatsby-transformer-remark"
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          `gatsby-remark-autolink-headers`, // <h>태그에 자동 auto Link
+          `gatsby-remark-prismjs`, // 코드하이라이ㅌ이
+        ]
+      }
+    },
   ]
 };
