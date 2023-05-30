@@ -4,12 +4,13 @@ import { graphql } from 'gatsby'
 import Master from "../templates/master.template"
 
 const IndexPage = ({ data }) => {
-  console.log(data)
+  // render 'about page'
   return (
     <Master data={data} />
   )
 }
 
+// get 'about-page id' in qurey
 export const query = graphql`
 query {
   markdownRemark(frontmatter: {title: {eq: "about"}}) {
