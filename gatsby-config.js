@@ -15,7 +15,7 @@ module.exports = {
   plugins: [
     {
       resolve: 'gatsby-source-filesystem',
-      options: { "name": "abouts", "path": './src/pages' },
+      options: { "name": "pages", "path": './src/pages' },
     },
     {
       resolve: `gatsby-transformer-remark`,

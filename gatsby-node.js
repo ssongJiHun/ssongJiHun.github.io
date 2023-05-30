@@ -7,6 +7,7 @@ exports.createPages = async ({ graphql, actions }) => {
         allMarkdownRemark {
             edges {
                 node {
+                    id
                     html
                     frontmatter {
                         title
@@ -18,16 +19,15 @@ exports.createPages = async ({ graphql, actions }) => {
     `);
 
     if (errors) throw errors; // error
-    /*
-        @params path : routing
-        @params path : template
-        @params contxt : props
-    */
+
     data.allMarkdownRemark.edges.forEach(({ node }) => {
         createPage({
             path: node.frontmatter.title,
             component: path.resolve('./src/templates/master.template.jsx'),
-            context: {},
+            context: {
+                id : node.id // add query variables to a page query
+                // https://www.gatsbyjs.com/docs/how-to/querying-data/page-query/#how-to-add-query-variables-to-a-page-query
+            },
         });
     })
 };

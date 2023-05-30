@@ -1,5 +1,5 @@
 ---
-title: "about"
+title: "abouts"
 ---
 
 # 송지훈 | 개발자
