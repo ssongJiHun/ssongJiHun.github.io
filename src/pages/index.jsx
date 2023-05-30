@@ -1,13 +1,14 @@
 import React from "react"
-import { graphql } from 'gatsby'
+import { graphql, navigate } from 'gatsby'
 
 import Master from "../templates/master.template"
 
 const IndexPage = ({ data }) => {
-  // render 'about page'
-  return (
-    <Master data={data} />
-  )
+  if (process.env.REACT_APP_MAIN_ABOUT)
+    return <Master data={data} />
+
+  // not about display 
+  navigate("/posts");
 }
 
 // get 'about-page id' in qurey
@@ -17,6 +18,7 @@ query {
     html
     frontmatter {
       title
+      home
     }
   }
 }
@@ -24,5 +26,5 @@ query {
 
 export default IndexPage
 
-export const Head = () => <title>Home Page</title>
+
 

@@ -6,7 +6,6 @@
   5. Gatsby의 createPageAPI를 사용하여 데이터와 템플릿을 정적 페이지 만든다.
 */
 
-
 module.exports = {
   siteMetadata: {
     title: `blogs`,

@@ -1,6 +1,6 @@
 ---
 title: "about"
-isVisible : false
+home : true
 ---
 
 # 송지훈 | 개발자
