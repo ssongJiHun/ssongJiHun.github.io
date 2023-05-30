@@ -1,5 +1,6 @@
 ---
-title: "abouts"
+title: "about"
+isVisible : false
 ---
 
 # 송지훈 | 개발자

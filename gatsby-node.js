@@ -11,6 +11,7 @@ exports.createPages = async ({ graphql, actions }) => {
                     html
                     frontmatter {
                         title
+                        isVisible
                     }
                 }
             }
@@ -21,11 +22,14 @@ exports.createPages = async ({ graphql, actions }) => {
     if (errors) throw errors; // error
 
     data.allMarkdownRemark.edges.forEach(({ node }) => {
+        if (node.frontmatter.isVisible)
+            return;
+
         createPage({
             path: node.frontmatter.title,
             component: path.resolve('./src/templates/master.template.jsx'),
             context: {
-                id : node.id // add query variables to a page query
+                id: node.id // add query variables to a page query
                 // https://www.gatsbyjs.com/docs/how-to/querying-data/page-query/#how-to-add-query-variables-to-a-page-query
             },
         });

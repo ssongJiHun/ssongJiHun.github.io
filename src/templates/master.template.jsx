@@ -2,7 +2,7 @@ import React from "react"
 
 import { graphql } from "gatsby"
 
-import Layout from "../component/layout/Layout";
+import Layout from "../component/commonLayout/Layout";
 
 const Master = ({ data }) => {
   const { markdownRemark } = data;
@@ -17,7 +17,6 @@ const Master = ({ data }) => {
 export const query = graphql`
 query($id: String!) {
   markdownRemark(id: {eq: $id}) {
-    id
     html
     frontmatter {
       title
