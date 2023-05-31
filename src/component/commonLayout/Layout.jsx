@@ -1,10 +1,7 @@
 import React from "react";
 
-import Header from "./Header";
-import Footer from "./Footer";
-
-import "./layout.css"
-
+import Header from "./header";
+import Footer from "./footer";
 
 const Layout = ({ children }) => {
     return (
@@ -19,5 +16,3 @@ const Layout = ({ children }) => {
 }
 
 export default Layout;
-
-export const Head = () => <title>asdasdasdasd</title>

@@ -1,16 +1,31 @@
 .blog-layout {
-    margin-left: 10%;
-    margin-right: 10%;
+    height: 100%;
 }
 
 .blog-header {
     height: 10%;
+    background-color: blueviolet;
 }
 
 .blog-main {
-    min-height: calc(100% - 20%);
+    min-height: calc(100% - 10%);
+    margin: 5% 0;    
+}
+
+.blog-main .md-container {
+    width: 50%;
+    min-width: 700px;
+    margin: 0 auto;
 }
 
 .blog-footer {
-    height: 10%;
+    background-color: aqua;
+}
+
+ul,
+h1,
+h2,
+h3,
+p {
+    margin: 0px
 }

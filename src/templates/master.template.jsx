@@ -1,14 +1,24 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../component/commonLayout/Layout";
+import Layout from "../component/commonLayout/layout";
 
+import "../component/commonLayout/layout.css"
+
+// md - static_page template
 const Master = ({ data }) => {
   const { markdownRemark } = data;
-
+  const { frontmatter: { title } } = markdownRemark;
   return (
     <Layout>
-      <div id='blog-container' dangerouslySetInnerHTML={{ __html: markdownRemark.html }}></div>
+      
+      {/* this parent className is blog-main */}
+      {/* change className : md-container or post-container */}
+      <div
+        className={title === 'about' ? 'md-container' : 'post-container'}
+        dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
+      />
+
     </Layout>
   )
 }

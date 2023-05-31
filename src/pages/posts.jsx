@@ -1,21 +1,21 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 
-import Layout from "../component/commonLayout/Layout";
+import Layout from "../component/commonLayout/layout";
 
 const Posts = ({ data }) => {
-    const { allMarkdownRemark: { edges } } = data;
-    return (
-        <Layout>
-            <ul>
-                {edges.map((edge) => (
-                    <li>
-                        <Link to={"/" + edge.node.frontmatter.title}>{edge.node.frontmatter.title}</Link>
-                    </li>
-                ))}
-            </ul>
-        </Layout>
-    )
+  const { allMarkdownRemark: { edges } } = data;
+  return (
+    <Layout>
+      <ul >
+        {edges.map((edge) => (
+          <li>
+            <Link to={"/" + edge.node.frontmatter.title}>{edge.node.frontmatter.title}</Link>
+          </li>
+        ))}
+      </ul>
+    </Layout>
+  )
 }
 
 export const query = graphql`
