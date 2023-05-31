@@ -1,0 +1,16 @@
+.blog-layout {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.blog-header {
+    height: 10%;
+}
+
+.blog-main {
+    min-height: calc(100% - 20%);
+}
+
+.blog-footer {
+    height: 10%;
+}
