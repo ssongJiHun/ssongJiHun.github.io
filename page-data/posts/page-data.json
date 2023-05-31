@@ -1,1 +1,1 @@
-{"componentChunkName":"component---src-pages-posts-jsx","path":"/posts/","result":{"data":{"allMarkdownRemark":{"edges":[{"node":{"frontmatter":{"title":"zzzz"}}},{"node":{"frontmatter":{"title":"about"}}}]}},"pageContext":{}},"staticQueryHashes":[],"slicesMap":{}}
+{"componentChunkName":"component---src-pages-posts-jsx","path":"/posts/","result":{"data":{"allMarkdownRemark":{"edges":[{"node":{"frontmatter":{"title":"about"}}},{"node":{"frontmatter":{"title":"zzzz"}}}]}},"pageContext":{}},"staticQueryHashes":[],"slicesMap":{}}
