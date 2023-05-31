@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../component/commonLayout/layout";
 
-import "../component/commonLayout/layout.css"
+import "../../styles.css"
 
 // md - static_page template
 const Master = ({ data }) => {
