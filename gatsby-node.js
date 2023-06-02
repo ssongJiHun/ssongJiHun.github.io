@@ -8,7 +8,6 @@ exports.createPages = async ({ graphql, actions }) => {
             edges {
                 node {
                     id
-                    html
                     frontmatter {
                         title
                     }

@@ -2,11 +2,12 @@ import React from "react";
 
 import { Link } from "gatsby"
 
-const PostCard = ({ data }) => {
+const PostCard = ({ node }) => {
+    const { frontmatter, rawMarkdownBody } = node;
     return (
-        <Link to={"/" + data.title}>
+        <Link to={"/" + frontmatter.title}>
             <li>
-                {data.title}
+                {frontmatter.title}
             </li>
         </Link>
     )

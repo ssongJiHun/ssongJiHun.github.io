@@ -9,19 +9,21 @@ const Posts = ({ data }) => {
   return (
     <Layout>
       <ul >
-        {edges.map((edge) => (
-          <PostCard data={edge.node.frontmatter}/>
-        ))}
+        {edges.map((edge) => {
+          return <PostCard node={edge.node} />
+        })}
       </ul>
     </Layout>
   )
 }
 
+// get only posts
 export const query = graphql`
   query {
-    allMarkdownRemark {
+    allMarkdownRemark(filter: {frontmatter: {visible: {eq: true}, menu: {eq: "posts"}}}) {
       edges {
         node {
+          rawMarkdownBody
           frontmatter {
             title
           }

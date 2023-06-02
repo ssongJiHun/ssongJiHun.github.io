@@ -12,7 +12,7 @@ const Header = () => {
             </div>
             <div className="blog-header-menu">
                 {menu.map((item) => {
-                    return (<Link to={item.link} className="link">{item.name}</Link>)
+                    return <Link to={item.link} className="link">{item.name}</Link>
                 })}
             </div>
         </header>
