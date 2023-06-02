@@ -18,7 +18,6 @@ query {
     html
     frontmatter {
       title
-      home
     }
   }
 }

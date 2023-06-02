@@ -9,3 +9,19 @@ home : true
 
 사용자가 편리하게 사용할 수 있고, 거부감이 없는 프론트엔드 개발자로 성장하기 위해 노력하고 있습니다. 
 
+asd
+asd
+asd
+
+
+asd
+
+asd
+
+asd
+
+asd
+
+asd
+
+asd

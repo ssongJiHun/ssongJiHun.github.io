@@ -1,16 +1,37 @@
-html,
-body,
-#gatsby-focus-wrapper,
-#___gatsby {
+html, body, #gatsby-focus-wrapper, #___gatsby {
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
 }
 
+ul, h1, h2, h3, p {
+    margin: 0px
+}
 
-.blog-layout {
+/* font */
+.font-selection {
+    
+}
+
+/* ipone SE */
+.blog-wrapper {
+    width: 60%;
     height: 100%;
+    min-width: 375px;
+    margin: 0 auto;
+}
+
+.blog-header-wrapper, .blog-content-wrapper, .blog-footer {
+    padding: 0 20px;
+}
+
+.blog-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+    background-color: blueviolet;
 }
 
 .blog-header {
@@ -18,25 +39,12 @@ body,
     background-color: blueviolet;
 }
 
-.blog-main {
-    min-height: calc(100% - 10%);
-    margin: 5% 0;    
-}
-
-.blog-main .md-container {
-    width: 50%;
-    min-width: 700px;
-    margin: 0 auto;
-}
-
 .blog-footer {
+    height: 10%;
     background-color: aqua;
 }
 
-ul,
-h1,
-h2,
-h3,
-p {
-    margin: 0px
+.blog-content-wrapper {
+    min-height: calc(100% - 20%);
 }
+
