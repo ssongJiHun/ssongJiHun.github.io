@@ -1,4 +1,5 @@
 ---
+menu : "posts"
 title: "zzzz"
 ---
 # 🚀 Song 개발 블로그

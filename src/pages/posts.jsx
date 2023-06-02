@@ -1,7 +1,8 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 
-import Layout from "../component/commonLayout/layout";
+import Layout from "../component/layout/layout";
+import PostCard from "../component/posts/postCard";
 
 const Posts = ({ data }) => {
   const { allMarkdownRemark: { edges } } = data;
@@ -9,9 +10,7 @@ const Posts = ({ data }) => {
     <Layout>
       <ul >
         {edges.map((edge) => (
-          <li>
-            <Link to={"/" + edge.node.frontmatter.title}>{edge.node.frontmatter.title}</Link>
-          </li>
+          <PostCard data={edge.node.frontmatter}/>
         ))}
       </ul>
     </Layout>
