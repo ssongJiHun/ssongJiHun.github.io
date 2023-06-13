@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkblogs=self.webpackChunkblogs||[]).push([[230],{4438:function(e,l,s){s.r(l);s(4677);var u=s(1120);l.default=()=>(0,u.tZ)("div",null,"여기는 index 페이지 입니다.")}}]);
+//# sourceMappingURL=component---src-pages-index-jsx-f14f76022a877ade0636.js.map
