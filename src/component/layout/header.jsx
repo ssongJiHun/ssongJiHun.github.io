@@ -8,11 +8,11 @@ const Header = () => {
     return (
         <header className="blog-header-wrapper">
             <div className="blog-header-logo">
-                <Link to="/" className="link">SONG JI HUN</Link>
+                <Link to="/">SONG JI HUN</Link>
             </div>
             <div className="blog-header-menu">
                 {menu.map((item) => {
-                    return <Link to={item.link} className="link">{item.name}</Link>
+                    return <Link to={item.link} >{item.name}</Link>
                 })}
             </div>
         </header>

@@ -2,18 +2,19 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../component/layout/layout"
-
-import "../../styles.css"
+import MarkdownHTML from "../component/markdown/markdown"
 
 // md - static_page template
 const Master = ({ data }) => {
   const { markdownRemark } = data;
   return (
     <Layout>
-      <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
+      <MarkdownHTML dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
     </Layout>
   )
 }
+
+
 
 export const query = graphql`
 query($id: String!) {

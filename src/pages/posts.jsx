@@ -8,9 +8,9 @@ const Posts = ({ data }) => {
   const { allMarkdownRemark: { edges } } = data;
   return (
     <Layout>
-      <ul >
-        {edges.map((edge) => {
-          return <PostCard node={edge.node} />
+      <ul className="post" >
+        {edges.map((edge, i) => {
+          return <PostCard key={i} node={edge.node} />
         })}
       </ul>
     </Layout>
@@ -23,9 +23,11 @@ export const query = graphql`
     allMarkdownRemark(filter: {frontmatter: {visible: {eq: true}, menu: {eq: "posts"}}}) {
       edges {
         node {
-          rawMarkdownBody
+          excerpt(format: PLAIN, pruneLength: 10000, truncate: true)
           frontmatter {
             title
+            created
+            category
           }
         }
       }

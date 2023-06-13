@@ -9,6 +9,7 @@ exports.createPages = async ({ graphql, actions }) => {
                 node {
                     id
                     frontmatter {
+                        menu
                         title
                     }
                 }
@@ -22,7 +23,7 @@ exports.createPages = async ({ graphql, actions }) => {
     data.allMarkdownRemark.edges.forEach(({ node }) => {
         createPage({
             path: node.frontmatter.title,
-            component: path.resolve('./src/templates/master.template.jsx'),
+            component: path.resolve(`./src/templates/markdown.template.jsx`),
             context: {
                 id: node.id // add query variables to a page query
                 // https://www.gatsbyjs.com/docs/how-to/querying-data/page-query/#how-to-add-query-variables-to-a-page-query

@@ -20,8 +20,29 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          `gatsby-remark-autolink-headers`, // <h>태그에 자동 auto Link
-          `gatsby-remark-prismjs`, // 코드하이라이ㅌ이
+          {
+            resolve: 'gatsby-remark-smartypants',
+            options: {
+              dashes: 'oldschool',
+            },
+          },
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              classPrefix: 'language-',
+            },
+          },
+          {
+            resolve: 'gatsby-remark-copy-linked-files',
+            options: {},
+          },
+          {
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              target: '_blank',
+              rel: 'nofollow',
+            },
+          },
         ]
       }
     },
