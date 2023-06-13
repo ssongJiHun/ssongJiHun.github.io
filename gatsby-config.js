@@ -9,7 +9,7 @@
 module.exports = {
   siteMetadata: {
     title: `blogs`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://ssongJiHun.github.io/`
   },
   plugins: [
     {
@@ -46,5 +46,6 @@ module.exports = {
         ]
       }
     },
+    `gatsby-plugin-emotion`
   ]
 };
