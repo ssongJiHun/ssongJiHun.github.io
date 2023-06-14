@@ -1,3 +1,5 @@
+export const blogTitle = 'SONGJIHUN';
+
 // top menu in header.jsx
 export const menu = [
     {
@@ -13,7 +15,7 @@ export const menu = [
 ];
 
 // posts tab in posts.jsx
-export const postsTab = [
+export const postCategories = [
     {
         name: 'JavaScript',
         visible: true
@@ -21,5 +23,25 @@ export const postsTab = [
     {
         name: 'HTML/CSS',
         visible: true
-    }
+    },
+    {
+        name: 'React/Vue',
+        visible: true
+    },
+    {
+        name : 'WEBPACK',
+        visible : true
+    },
+    {
+        name : 'GIT',
+        visible : true
+    },
+    {
+        name : '알고리즘',
+        visible : true
+    },
+    {
+        name : '네트워크',
+        visible : true
+    },
 ];

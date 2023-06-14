@@ -10,7 +10,7 @@ const Posts = ({ data }) => {
     <Layout>
       <ul className="post" >
         {edges.map((edge, i) => {
-          return <PostCard key={i} node={edge.node} />
+          return <PostCard key={'node' + i} node={edge.node} />
         })}
       </ul>
     </Layout>

@@ -1,4 +1,5 @@
 ---
+template : "default"
 menu : "about" 
 title: "about"
 category : ''

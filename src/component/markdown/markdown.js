@@ -1,4 +1,3 @@
-
 import styled from '@emotion/styled';
 
 const COLORS = {
@@ -30,12 +29,12 @@ p {
 }
 
 blockquote {
-  margin: 30px 0;
-  padding: 5px 15px;
-  border-left: 2px solid #000000;
-  font-weight: 800;
+  margin: 10px 0;
+  padding: 0 15px;
+  border-left: 4px solid #ddd;
+  color: #777;
 }
-
+    
 // Adjust List Element Style
 ol,
 ul {
@@ -45,7 +44,12 @@ ul {
 
 // Adjust Horizontal Rule style
 hr {
-  border: px solid #000000;
+  border: none;
+    height: 1px;
+    width: 100%;
+    background: #dee2e6;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 // Adjust Link Element Style
@@ -330,6 +334,8 @@ pre[class*='language-'] {
     padding: 0.25rem;
     color: ${COLORS.BLACK};
     background-color: ${COLORS.GRAY};
+    font-size: 85%;
+    border-radius: 3px;
   }
 
   @media (max-width: 768px) {

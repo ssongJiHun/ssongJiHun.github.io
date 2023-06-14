@@ -9,9 +9,10 @@
 module.exports = {
   siteMetadata: {
     title: `blogs`,
-    siteUrl: `https://ssongJiHun.github.io/`
+    siteUrl: `https://ssongjihun.github.io/`
   },
   plugins: [
+    `gatsby-plugin-emotion`,
     {
       resolve: 'gatsby-source-filesystem',
       options: { "name": "pages", "path": './src/pages' },
@@ -20,6 +21,7 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          `gatsby-remark-autolink-headers`,
           {
             resolve: 'gatsby-remark-smartypants',
             options: {
@@ -45,7 +47,6 @@ module.exports = {
           },
         ]
       }
-    },
-    `gatsby-plugin-emotion`
+    }
   ]
 };

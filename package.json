@@ -9,15 +9,17 @@
   "scripts": {
     "develop": "gatsby clean && gatsby develop",
     "start": "gatsby develop",
-    "build": "gatsby build",
+    "build": "env-cmd -f .env.production gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gatsby clean && gatsby build && gh-pages -d public"
+    "deploy": "env-cmd -f .env.production gatsby clean && gatsby build && gh-pages -d public"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "cross-env": "^7.0.3",
+    "env-cmd": "^10.1.0",
+    "fontsource-noto-sans-kr": "^4.0.0",
     "gatsby": "^5.10.0",
     "gatsby-plugin-emotion": "^8.10.0",
     "gatsby-remark-autolink-headers": "^6.10.0",

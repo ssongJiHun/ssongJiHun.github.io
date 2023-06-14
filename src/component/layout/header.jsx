@@ -1,19 +1,47 @@
 import React from "react";
 
 import { Link } from 'gatsby';
+import styled from '@emotion/styled';
 
-import { menu } from '../../__fixture__/__fixture__';
+import { blogTitle, menu } from '../../__fixture__/__fixture__';
+
+const LogoLink = styled(Link)`
+    display: flex;
+    align-items: center;
+`;
+
+
+const MenuLink = styled(Link)(props => ({
+    color: props.color
+}))
+
+const menuColor = {
+    default : '#7e8686',
+    selected: '#000'
+};
 
 const Header = () => {
     return (
         <header className="blog-header-wrapper">
-            <div className="blog-header-logo">
-                <Link to="/">SONG JI HUN</Link>
-            </div>
+            <LogoLink to="/">
+                <span>
+                    {blogTitle}
+                </span>
+                <span style={{ marginLeft: '5px', fontSize: '15px', color: '#7e8686' }}>
+                    블로그
+                </span>
+            </LogoLink>
             <div className="blog-header-menu">
-                {menu.map((item) => {
-                    return <Link to={item.link} >{item.name}</Link>
-                })}
+                {
+                    menu.map((item, i) =>
+                        <MenuLink
+                            to={item.link} key={'menu' + i}
+                            color={menuColor.default}
+                        >
+                            {item.name}
+                        </MenuLink>
+                    )
+                }
             </div>
         </header>
     )

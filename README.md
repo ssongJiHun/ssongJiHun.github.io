@@ -1,17 +1,17 @@
-## 🚀 Song 개발 블로그
-
-1.  **Create a Gatsby site.**
+## 기술 블로그
 
 
-2.  **Start developing.**
+### 1. 프로젝트 구성
+ 
 
+### 2. MD 파일 상단 옵션
 
+ - template : "" `default` | `post`
+ - menu : ""  `about` | `posts`
+ - title: "" `URL`
+ - category : ''
 
-3.  **Open the code and start customizing!**
+ - created : '2023-06-13' `post 필수 옵션`
+ - visible : true `post 필수 옵션`
 
-
-4.  **Learn more**
-
-
-## 🚀 Quick start (Netlify)
 
