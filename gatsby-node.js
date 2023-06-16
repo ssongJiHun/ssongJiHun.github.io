@@ -11,6 +11,7 @@ exports.createPages = async ({ graphql, actions }) => {
                     frontmatter {
                         title
                         template
+                        menu
                     }
                 }
             }
@@ -22,7 +23,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     data.allMarkdownRemark.edges.forEach(({ node }) => {
         createPage({
-            path: node.frontmatter.title,
+            path: (node.frontmatter.menu === 'about'? "" : node.frontmatter.menu + "/" ) + node.frontmatter.title,
             component: path.resolve(`./src/templates/${node.frontmatter.template}.template.jsx`),
             context: {
                 id: node.id // add query variables to a page query

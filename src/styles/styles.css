@@ -1,3 +1,7 @@
+:root {
+	--post-card-height: 130px  /* postCard_height */
+}
+
 * {
     box-sizing: border-box;
 }
@@ -10,7 +14,7 @@
 
 @font-face {
     font-family: Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono',
-    'Courier New', monospace;
+        'Courier New', monospace;
     src: local('*');
     unicode-range: U+0041-005A, U+0061-007A;
 }
@@ -92,22 +96,18 @@ a {
     text-align: center;
 }
 
-/* posts card */
+/* posts card li*/
 .blog-content-wrapper .post .post-card {
-    height: 150px;
+    height: var(--post-card-height);
     margin-bottom: 10px;
     overflow: hidden;
 }
 
 .blog-content-wrapper .post .post-card a {
     display: flex;
-    flex-direction: column;
     height: 100%;
-    padding: 15px;
-
-    border: 1px solid #a3a3a8;
-    border-radius: 6px;
 }
+
 
 .blog-content-wrapper .post .post-card-title {
     font-size: 18px;
@@ -127,14 +127,6 @@ a {
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical
-}
-
-.blog-content-wrapper .post .post-card-info {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
-    color: #a8a8a8;
-    margin-top: auto;
 }
 
 /* markdown tableOfcontents */

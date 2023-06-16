@@ -10,13 +10,12 @@ const LogoLink = styled(Link)`
     align-items: center;
 `;
 
-
 const MenuLink = styled(Link)(props => ({
     color: props.color
 }))
 
 const menuColor = {
-    default : '#7e8686',
+    default: '#7e8686',
     selected: '#000'
 };
 
@@ -32,16 +31,13 @@ const Header = () => {
                 </span>
             </LogoLink>
             <div className="blog-header-menu">
-                {
-                    menu.map((item, i) =>
-                        <MenuLink
-                            to={item.link} key={'menu' + i}
-                            color={menuColor.default}
-                        >
-                            {item.name}
-                        </MenuLink>
-                    )
-                }
+                {menu.map((item, i) =>
+                    <MenuLink
+                        to={item.link} key={'menu' + i}
+                        color={window.location.href.indexOf(item.link) > 0 ? menuColor.selected : menuColor.default} >
+                        {item.name}
+                    </MenuLink>
+                )}
             </div>
         </header>
     )

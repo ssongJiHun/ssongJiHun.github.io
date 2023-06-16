@@ -2,10 +2,11 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../component/layout/layout";
-import PostCard from "../component/posts/postCard";
+import PostCard from "../component/posts/postcard/post-card";
 
 const Posts = ({ data }) => {
   const { allMarkdownRemark: { edges } } = data;
+
   return (
     <Layout>
       <ul className="post" >
