@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkblogs=self.webpackChunkblogs||[]).push([[645],{6985:function(t,e,l){l.r(e);l(9953);var n=l(8140),a=l(2029),r=l(1120);e.default=t=>{let{data:e}=t;const{markdownRemark:l}=e;return(0,r.tZ)(n.Z,null,(0,r.tZ)(a.Z,{dangerouslySetInnerHTML:{__html:l.html}}))}}}]);
+//# sourceMappingURL=component---src-templates-default-template-jsx-8680fb46bda5a48fb346.js.map
