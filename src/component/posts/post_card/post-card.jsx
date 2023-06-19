@@ -12,7 +12,7 @@ const PostCard = ({ node }) => {
         <li className="post-card" >
             <Link to={"/posts/" + frontmatter.title}>
                 <PostCardThumbnail created={frontmatter.created} image={{}} />
-                <PostCardContent frontmatter={frontmatter} excerpt={excerpt} />
+                <PostCardContent frontmatter={frontmatter} excerpt={excerpt}/>
             </Link>
         </li>
     )

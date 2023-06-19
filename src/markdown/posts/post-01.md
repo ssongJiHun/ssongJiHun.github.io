@@ -3,24 +3,25 @@ template : "post"
 title: "zzzz"
 
 category : ''
+tags : '개발자, 테스트, 하하하'
 created : '2023-06-13'
 visible : true
 ---
 # Gatsby를 이용한 개인 블로그 만들기
 
-## - md 이미지 지원
+## - md 이미지 지원 - src/images
 
-## - posts 썸네일 이미지 유무에 따른
+## posts 
+> 썸네일 이미지 유무에 따른
+> 카테고리 - 제목 - 내용 - 태그
+> 이전 글, 다음 글
+> 카테고리별 posts list render
 
-## - 헤더 설정
+## Page 
+> 헤더 설정
+> SEO, siteMap
+> 다크모드 지원
 
-## - posts-card 태그 기능
-
-## - SEO, siteMap
-
-## - post 이전 글, 다음 글
-
-## 추후 다크모드 지원
 
 ![](http://www.gstatic.com/webp/gallery/5.jpg)
 ---
@@ -46,4 +47,6 @@ box-sizing: border-box;
 
 밑줄
 
-## - GraphQL : frontmatter - menu  -> 디렉토리 기반으로 변경
+## -  디렉토리 기반으로 변경d
+
+## - 스크롤바 유무에 따라 레이아웃이 흐트러질 경우

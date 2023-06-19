@@ -13,10 +13,10 @@ const Post = ({ data }) => {
   return (
     <Layout>
       {/* posts title */}
-      <p>{frontmatter.category}</p>
-      <h1>{frontmatter.title}</h1>
-      <p>{frontmatter.created}</p>
-      <hr style={{ marginTop: '2rem', marginBottom: '2rem' }}></hr>
+      <span style={{ marginRight: '16px' }}>{frontmatter.category || 'test'}</span>
+      <span className="gray-color">{frontmatter.created.replaceAll('-', '.')}</span>
+
+      <h1 style={{ fontSize: '40px', marginBottom: '24px' }}>{frontmatter.title}</h1>
 
       <MarkdownHTML dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
       <div className="table-of-contents" dangerouslySetInnerHTML={{ __html: markdownRemark.tableOfContents }} />

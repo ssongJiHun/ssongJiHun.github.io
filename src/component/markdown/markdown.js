@@ -28,9 +28,13 @@ p {
   padding: 3px 0;
 }
 
+img {
+  max-width: 100%;
+}
+
 blockquote {
-  margin: 10px 0;
-  padding: 0 15px;
+  margin: 2rem 0px;
+  padding: 1rem 1rem 1rem 2rem;
   border-left: 4px solid #ddd;
   color: #777;
 }
@@ -38,8 +42,9 @@ blockquote {
 // Adjust List Element Style
 ol,
 ul {
+  list-style-type : disc;
   margin-left: 20px;
-  padding: 30px 0;
+  padding: 10px 0;
 }
 
 // Adjust Horizontal Rule style

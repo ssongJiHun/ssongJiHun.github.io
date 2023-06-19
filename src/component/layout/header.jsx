@@ -10,11 +10,6 @@ const LogoLink = styled(Link)`
     align-items: center;
 `;
 
-const MenuLink = styled(Link)`
-    color : #7e8686;
-`;
-
-
 const Header = () => {
 
     return (
@@ -23,18 +18,19 @@ const Header = () => {
                 <span>
                     {blogTitle}
                 </span>
-                <span style={{ marginLeft: '5px', fontSize: '15px', color: '#7e8686' }}>
+                <span className='gray-color' style={{ marginLeft: '5px', fontSize: '15px' }}>
                     블로그
                 </span>
             </LogoLink>
             <div className="blog-header-menu">
                 {menu.map((item, i) =>
-                    <MenuLink
+                    <Link
+                        className='gray-color'
                         to={item.link} key={'menu' + i}
                         activeStyle={{ color: '#000' }}
                         partiallyActive={true} >
                         {item.name}
-                    </MenuLink>
+                    </Link>
                 )}
             </div>
         </header>

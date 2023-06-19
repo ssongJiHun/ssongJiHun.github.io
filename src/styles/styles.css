@@ -1,5 +1,6 @@
 :root {
-	--post-card-height: 130px  /* postCard_height */
+    --post-card-height: 130px
+        /* postCard_height */
 }
 
 * {
@@ -27,11 +28,14 @@ body,
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: inherit;
     /* font-family: "Noto Sans KR"; */
 }
 
+html>/**/body { overflow-y:scroll; }
 
+.gray-color {
+    color: #999;
+}
 
 
 ul {
@@ -52,27 +56,16 @@ a {
     color: black;
 }
 
-/* ipone SE */
+/* blog-content view */
 .blog-wrapper {
     display: flex;
     flex-direction: column;
     width: 60%;
     height: 100%;
-    min-width: 375px;
+    min-width: 313px;
     max-width: 720px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
-
-.blog-header-wrapper a {
-    font-size: 20px;
-    font-weight: 700;
-}
-
-.blog-header-wrapper .blog-header-menu a:not(:last-child) {
-    margin-right: 20px;
-}
-
 
 /* header */
 .blog-header-wrapper {
@@ -80,13 +73,21 @@ a {
     justify-content: space-between;
     align-items: center;
     min-height: 60px;
-    margin-bottom: 50px;
+}
+
+.blog-header-wrapper a {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.blog-header-wrapper .blog-header-menu a:not(:last-child) {
+    margin-right: 20px;
 }
 
 /* 
-    margin - auto 를 활용한 정렬
+margin - auto 를 활용한 정렬
     부모 : display - flex ( 크기 지정되어있어야 한다.)
-    자식 : margin : auto 적용하면 최하단 또는 최상단 유지
+    자식 : margin-top : auto 적용하면 최하단 또는 최상단 유지
 */
 
 /* footer */
@@ -96,7 +97,8 @@ a {
     text-align: center;
 }
 
-/* posts card li*/
+/* blog-content-wrapper : <main> */
+/* post : <ul>, post-card : <li>*/
 .blog-content-wrapper .post .post-card {
     height: var(--post-card-height);
     margin-bottom: 10px;
@@ -109,14 +111,14 @@ a {
 }
 
 
-.blog-content-wrapper .post .post-card-title {
+.blog-content-wrapper .post .post-card .title {
     font-size: 18px;
     font-weight: bold;
     line-height: 1.4;
     margin-bottom: 7px;
 }
 
-.blog-content-wrapper .post .post-card-description {
+.blog-content-wrapper .post .post-card .description {
     font-size: 13px;
     line-height: 20px;
     margin-bottom: 10px;
@@ -127,6 +129,19 @@ a {
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical
+}
+
+.blog-content-wrapper .post .post-card .tag {
+    align-items: center;
+    line-height: 14px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    border: 1px solid #dbdbdb;
+    padding: 5px 8px;
+    color: #666;
+    font-size: 12px;
+    background-color: #fff;
 }
 
 /* markdown tableOfcontents */

@@ -3,29 +3,36 @@ template : "default"
 title: "about"
 path : '/about'
 ---
-## asdsd
-1년차 개발자 송지훈입니다. 클린코드를 지향하며,  스스로 문제점을 찾기 위해서 노력하고, 지속적인 리펙토링을 통해 고도화 작업 즐겨합니다.
+## Gatsby - my blog
 
-또한 편리하고 속도가 빠른 개발을 위해 테스트 주도 개발(TDD)를 지향하며, 개인적인 성장과 회사 문화를 위해서 코드리뷰를 선호합니다.
-
->ㄴㅁㅇㅁㄴㅇ
+### 초기 세팅 방법
 
 
-사용자가 편리하게 사용할 수 있고, 거부감이 없는 프론트엔드 개발자로 성장하기 위해 노력하고 있습니다. 
 
-asd
-asd
-asd
+``` md
+# option in gobal
+template : "" `default` | `post`
+title: "" `URL`
+
+# option in post 
+category : ''
+created : '2023-06-13'
+visible : true
+ ```
+
+### 1. 프로젝트 구성
 
 
-asd
+### 2. Gatsby 
+  1. `gatsby-source-filesystem` 로 마크다운 파일을 읽는다.
+  2. `gatsby-transformer-remark` 로 마크다운 파일을 해석한다.
+  3. 해석된 데이터를 GraphQL로 가져져온다.
+  4. 가져온 정보를 미리 설정한 템플릿에 배치한다.
+  5. Gatsby의 createPageAPI를 사용하여 데이터와 템플릿을 정적 페이지 만든다.
 
-asd
+### 2. MarkDown 파일 상단 옵션
 
-asd
 
-asd
-
-asd
-
-asd
+asdasdas
+dasdasd
+asdasd

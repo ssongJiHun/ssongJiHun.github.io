@@ -27,7 +27,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   data.allMarkdownRemark.edges.forEach(({ node: { id, frontmatter, parent } }) => {
     createPage({
-      path: frontmatter.path || `${parent.relativeDirectory}/${frontmatter.title}`,
+      path: frontmatter.path || `${parent.relativeDirectory}/${frontmatter.title}`, // menu partiallyActive, active
       component: path.resolve(`./src/templates/${frontmatter.template}.template.jsx`),
       context: {
         id: id // add query variables to a page query

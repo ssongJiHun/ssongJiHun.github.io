@@ -2,7 +2,7 @@
 import { css, jsx } from "@emotion/react"
 import styled from "@emotion/styled"
 
-const thumbnailStyle = css`
+const thumbnail = css`
   min-width : var(--post-card-height);
   margin-right : 45px;
   overflow : hidden;
@@ -43,7 +43,7 @@ const PostCardThumbnail = ({ created, imagePath }) => {
   ];
 
   return (
-    <div css={thumbnailStyle}>
+    <div css={thumbnail}>
       <div css={wrapperStyle}>
         <DateView>
           {d.getDate()}
