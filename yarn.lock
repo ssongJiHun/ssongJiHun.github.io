@@ -4403,7 +4403,6 @@ __metadata:
     gatsby-remark-autolink-headers: ^6.10.0
     gatsby-remark-copy-linked-files: ^6.10.0
     gatsby-remark-external-links: ^0.0.4
-    gatsby-remark-images: ^7.11.0
     gatsby-remark-prismjs: ^7.10.0
     gatsby-remark-smartypants: ^6.10.0
     gatsby-source-filesystem: ^5.11.0
@@ -7637,27 +7636,6 @@ __metadata:
     unist-util-find: ^1.0.1
     unist-util-visit: ^1.1.3
   checksum: 2117ce7fa66f7c67f05765761f70a3bcca6c294843cd8503b78b62650964c8ac917dcc75aa267d18d6920cb99cf0c7b13c740be2eca93d90e0ad35f015c55eae
-  languageName: node
-  linkType: hard
-
-"gatsby-remark-images@npm:^7.11.0":
-  version: 7.11.0
-  resolution: "gatsby-remark-images@npm:7.11.0"
-  dependencies:
-    "@babel/runtime": ^7.20.13
-    chalk: ^4.1.2
-    cheerio: ^1.0.0-rc.10
-    gatsby-core-utils: ^4.11.0
-    is-relative-url: ^3.0.0
-    lodash: ^4.17.21
-    mdast-util-definitions: ^4.0.0
-    query-string: ^6.14.1
-    unist-util-select: ^3.0.4
-    unist-util-visit-parents: ^3.1.1
-  peerDependencies:
-    gatsby: ^5.0.0-next
-    gatsby-plugin-sharp: ^5.0.0-next
-  checksum: 7abbac1ee927b0f2df87ed8049cfa21eb1def3d21b10968dbc88a6a8acaf16703df6506d87fc30b1694ec7d44c197ab2dfc84ce5816159f3c39761f436087057
   languageName: node
   linkType: hard
 
@@ -14482,7 +14460,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unist-util-visit-parents@npm:^3.0.0, unist-util-visit-parents@npm:^3.1.1":
+"unist-util-visit-parents@npm:^3.0.0":
   version: 3.1.1
   resolution: "unist-util-visit-parents@npm:3.1.1"
   dependencies:

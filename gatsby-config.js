@@ -17,21 +17,14 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: { "name": "pages", "path": './src/markdown/' },
     },
-    `gatsby-plugin-image`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    // `gatsby-plugin-image`,
+    `gatsby-transformer-sharp`,  // create graphQL node 
+    // `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
           `gatsby-remark-autolink-headers`,
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 590,
-              wrapperStyle: fluidResult => `flex:${_.round(fluidResult.aspectRatio, 2)};`,
-            },
-          },
           {
             resolve: 'gatsby-remark-smartypants',
             options: {
