@@ -21,7 +21,10 @@ const Posts = ({ data }) => {
 // get only posts
 export const query = graphql`
   query {
-    allMarkdownRemark(filter: {frontmatter: {visible: {eq: true}, menu: {eq: "posts"}}}) {
+    allMarkdownRemark(
+      sort: {frontmatter: {created: DESC}}
+      filter: {frontmatter: {visible: {eq: true}, title: {}}, fileAbsolutePath: {regex: "/posts/"}}
+    ) {
       edges {
         node {
           excerpt(format: PLAIN, pruneLength: 10000, truncate: true)

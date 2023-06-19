@@ -1,9 +1,6 @@
 node_modules/
 .cache/
 public
-.env
-.env.development
-.env.production
 
 ### yarn ###
 # used Zero-Install
@@ -14,12 +11,3 @@ public
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
-
-# unused Zero-Install
-.yarn/*
-!.yarn/patches
-!.yarn/releases
-!.yarn/plugins
-!.yarn/sdks
-!.yarn/versions
-.pnp.*

@@ -10,16 +10,13 @@ const LogoLink = styled(Link)`
     align-items: center;
 `;
 
-const MenuLink = styled(Link)(props => ({
-    color: props.color
-}))
+const MenuLink = styled(Link)`
+    color : #7e8686;
+`;
 
-const menuColor = {
-    default: '#7e8686',
-    selected: '#000'
-};
 
 const Header = () => {
+
     return (
         <header className="blog-header-wrapper">
             <LogoLink to="/">
@@ -34,7 +31,8 @@ const Header = () => {
                 {menu.map((item, i) =>
                     <MenuLink
                         to={item.link} key={'menu' + i}
-                        color={window.location.href.indexOf(item.link) > 0 ? menuColor.selected : menuColor.default} >
+                        activeStyle={{ color: '#000' }}
+                        partiallyActive={true} >
                         {item.name}
                     </MenuLink>
                 )}

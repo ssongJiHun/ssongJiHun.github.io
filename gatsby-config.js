@@ -15,13 +15,23 @@ module.exports = {
     `gatsby-plugin-emotion`,
     {
       resolve: 'gatsby-source-filesystem',
-      options: { "name": "pages", "path": './src/pages' },
+      options: { "name": "pages", "path": './src/markdown/' },
     },
+    `gatsby-plugin-image`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
           `gatsby-remark-autolink-headers`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+              wrapperStyle: fluidResult => `flex:${_.round(fluidResult.aspectRatio, 2)};`,
+            },
+          },
           {
             resolve: 'gatsby-remark-smartypants',
             options: {
@@ -32,17 +42,6 @@ module.exports = {
             resolve: 'gatsby-remark-prismjs',
             options: {
               classPrefix: 'language-',
-            },
-          },
-          {
-            resolve: 'gatsby-remark-copy-linked-files',
-            options: {},
-          },
-          {
-            resolve: 'gatsby-remark-external-links',
-            options: {
-              target: '_blank',
-              rel: 'nofollow',
             },
           },
         ]

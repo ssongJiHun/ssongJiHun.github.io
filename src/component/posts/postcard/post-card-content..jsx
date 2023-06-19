@@ -1,7 +1,7 @@
 /** @jsx jsx */
-import { css, jsx } from "@emotion/react"
+import { jsx } from "@emotion/react"
 
-const PostCardContent = ({ frontmatter }) => {
+const PostCardContent = ({ frontmatter, excerpt }) => {
 
   return (
     <div>
