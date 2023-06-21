@@ -23,8 +23,14 @@ visible : true
 > 다크모드 지원
 
 
-![](http://www.gstatic.com/webp/gallery/5.jpg)
----
+## 블로그
+1. 합성 컴포넌트 패턴(Compound Components Pattern)
+2. VAC 패턴
+3. Container - Presenter 패턴
+3. Custom Hook Pattern
+4. FLEX 패턴
+5. Folder 아키텍처
+6. 옵저버 패턴
 
 > ㅎㅇㅎㅇ
 
