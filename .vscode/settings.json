@@ -1,0 +1,6 @@
+{
+    "markdown.styles": [
+        "src\\styles\\github-markdown.css",
+        "src\\styles\\reset-markdown.css"
+    ]
+}
