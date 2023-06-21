@@ -5,7 +5,8 @@ public
 ### yarn ###
 # used Zero-Install
 .yarn/*
-!.yarn/cache
+# 예외 파일
+!.yarn/cache 
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
