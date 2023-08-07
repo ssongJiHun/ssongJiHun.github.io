@@ -9,9 +9,9 @@ const PostCard = ({ node }) => {
     const { frontmatter, excerpt } = node;
 
     return (
-        <li className="post-card" >
-            <Link to={"/posts/" + frontmatter.title}>
-                <PostCardThumbnail created={frontmatter.created} image={{}} />
+        <li className="post-card-wrapper" >
+            <Link className="post-card" to={"/posts/" + frontmatter.title}>
+                <PostCardThumbnail created={frontmatter.created}  imagePath={frontmatter.thumbnail} />
                 <PostCardContent frontmatter={frontmatter} excerpt={excerpt}/>
             </Link>
         </li>

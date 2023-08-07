@@ -5,6 +5,8 @@
 
 * {
     box-sizing: border-box;
+
+    /* border: 1px solid #f4f800; */
 }
 
 @font-face {
@@ -31,7 +33,12 @@ body,
     /* font-family: "Noto Sans KR"; */
 }
 
-html>/**/body { overflow-y:scroll; }
+html>
+
+/**/
+body {
+    overflow-y: scroll;
+}
 
 .gray-color {
     color: #999;
@@ -41,7 +48,7 @@ html>/**/body { overflow-y:scroll; }
 ul {
     list-style-type: none;
     padding: 0;
-    margin: 0px
+    margin: 0px;
 }
 
 h1,
@@ -99,29 +106,37 @@ margin - auto 를 활용한 정렬
 
 /* blog-content-wrapper : <main> */
 /* post : <ul>, post-card : <li>*/
-.blog-content-wrapper .post .post-card {
+.blog-content-wrapper .post .post-card-wrapper {
     height: var(--post-card-height);
     margin-bottom: 10px;
     overflow: hidden;
 }
 
-.blog-content-wrapper .post .post-card a {
+.blog-content-wrapper .post .post-card-wrapper a {
     display: flex;
     height: 100%;
 }
 
+.blog-content-wrapper .post .post-card-wrapper .post-card .thumbnail {
+    min-width: var(--post-card-height);
+    margin-right: 14px;
+    overflow: hidden;
+}
 
-.blog-content-wrapper .post .post-card .title {
+.blog-content-wrapper .post .post-card-wrapper .post-card .content .title {
     font-size: 18px;
     font-weight: bold;
     line-height: 1.4;
     margin-bottom: 7px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
-.blog-content-wrapper .post .post-card .description {
+.blog-content-wrapper .post .post-card-wrapper .post-card .content .description {
     font-size: 13px;
     line-height: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 
     overflow: hidden;
     white-space: normal;
@@ -131,13 +146,12 @@ margin - auto 를 활용한 정렬
     -webkit-box-orient: vertical
 }
 
-.blog-content-wrapper .post .post-card .tag {
+.blog-content-wrapper .post .post-card-wrapper .post-card .content .tag {
+    display: inline-block;
     align-items: center;
     line-height: 14px;
     margin-right: 8px;
     margin-bottom: 8px;
-    border-radius: 4px;
-    border: 1px solid #dbdbdb;
     padding: 5px 8px;
     color: #666;
     font-size: 12px;
@@ -183,4 +197,19 @@ margin - auto 를 활용한 정렬
     background-color: grey;
     border-radius: 10px;
     box-shadow: inset 0px 0px 5px white;
+}
+
+/* utill css */
+.flex-helf {
+    flex: 1 0 auto;
+}
+
+.box-border-round {
+    border-radius: 4px;
+    border: 1px solid #dbdbdb;
+}
+
+.prebtn, .nextbtn {
+    cursor: pointer;
+    background-color: black;
 }

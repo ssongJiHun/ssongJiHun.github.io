@@ -2,21 +2,19 @@
 import { css, jsx } from "@emotion/react"
 import styled from "@emotion/styled"
 
-const thumbnail = css`
-  min-width : var(--post-card-height);
-  margin-right : 45px;
-  overflow : hidden;
-`
-const wrapperStyle = css`
-  width : 100%;
-  height : 100%;
-  position: relative;
-   top: calc(0px - 100%);
-   .post-card a:hover & {
-    transform: translateY(100%);
-    transition-duration: 0.4s;
-  }
-`
+
+const wrapper = {
+    default: css`
+        width : 100%;
+        height : 100%;
+        position: relative;`,
+    active: css`
+        top: calc(0px - 100%);
+        .post-card a:hover & {
+            transform: translateY(100%);
+            transition-duration: 0.4s;
+        }`
+}
 
 const DateView = styled.div`
   display: flex;
@@ -37,24 +35,27 @@ const PreView = styled.div`
 `
 
 const PostCardThumbnail = ({ created, imagePath }) => {
-  const d = new Date(created);
-  const monthNames = ["January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
-  ];
+    const d = new Date(created);
+    const monthNames = ["January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+    ];
 
-  return (
-    <div css={thumbnail}>
-      <div css={wrapperStyle}>
-        <DateView>
-          {d.getDate()}
-          <span style={{ fontSize: '13px' }}>
-            {monthNames[d.getMonth()]}
-          </span>
-        </DateView>
-        <PreView />
-      </div>
-    </div>
-  );
+    let wrapperStyles = [wrapper.default];
+    if (imagePath && imagePath !== '') wrapperStyles.push(wrapper.active);
+
+    return (
+        <div className="thumbnail">
+            <div css={wrapperStyles}>
+                <DateView>
+                    {d.getDate()}
+                    <span style={{ fontSize: '13px' }}>
+                        {monthNames[d.getMonth()]}
+                    </span>
+                </DateView>
+                <PreView />
+            </div>
+        </div>
+    );
 }
 
 export default PostCardThumbnail;

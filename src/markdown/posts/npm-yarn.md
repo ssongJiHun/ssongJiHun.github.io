@@ -1,6 +1,6 @@
 ---
 template : "post"
-title: "NPM과 YARN 차이 알아보자"
+title: "NPM과 YARN 차이"
 
 category : ''
 tags : '개발자, 테스트, 하하하'

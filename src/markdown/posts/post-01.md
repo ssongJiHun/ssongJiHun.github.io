@@ -1,6 +1,6 @@
 ---
 template : "post"
-title: "zzzz"
+title: "Gatsby 개인블로그 마이그레이션"
 
 category : ''
 tags : '개발자, 테스트, 하하하'
@@ -12,9 +12,11 @@ visible : true
 ## - md 이미지 지원 - src/images
 
 ## posts 
-> 썸네일 이미지 유무에 따른
-> 카테고리 - 제목 - 내용 - 태그
+> 썸네일 이미지 유무에 따른 
+카테고리 - 제목 - 내용 - 태그
+
 > 이전 글, 다음 글
+
 > 카테고리별 posts list render
 
 ## Page 
@@ -31,6 +33,8 @@ visible : true
 4. FLEX 패턴
 5. Folder 아키텍처
 6. 옵저버 패턴
+7. MVVM 패턴
+
 
 > ㅎㅇㅎㅇ
 

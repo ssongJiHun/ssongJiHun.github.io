@@ -36,6 +36,7 @@ export const query = graphql`
             created
             category
             tags
+            thumbnail
           }
         }
       }

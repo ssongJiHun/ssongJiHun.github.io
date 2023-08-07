@@ -1,15 +1,15 @@
 import styled from '@emotion/styled';
 
 const COLORS = {
-  MAIN: '#f5f5f8',
-  SUB: '#e4f1ff',
-  SUB_MIDDLE_BOLD: '#badcff',
-  SUB_BOLD: '#0E68C8',
-  WHITE: '#ffffff',
-  BLACK: '#000000',
-  GRAY: '#e2e5e6',
-  GRAY_BOLD: '#757575',
-  SHADOW: 'rgba(82,82,82,0.75)',
+    MAIN: '#f5f5f8',
+    SUB: '#e4f1ff',
+    SUB_MIDDLE_BOLD: '#badcff',
+    SUB_BOLD: '#0E68C8',
+    WHITE: '#ffffff',
+    BLACK: '#000000',
+    GRAY: '#e2e5e6',
+    GRAY_BOLD: '#757575',
+    SHADOW: 'rgba(82,82,82,0.75)',
 };
 
 const MarkdownHTML = styled.div`
@@ -33,10 +33,18 @@ img {
 }
 
 blockquote {
-  margin: 2rem 0px;
-  padding: 1rem 1rem 1rem 2rem;
-  border-left: 4px solid #ddd;
-  color: #777;
+    margin : 10px 0;
+    padding: 0 1em;
+    color: #6a737d;
+    border-left: 0.25em solid #dfe2e5;
+}
+
+blockquote>:first-child {
+    margin-top: 0;
+}
+
+blockquote>:last-child {
+    margin-bottom: 0;
 }
     
 // Adjust List Element Style

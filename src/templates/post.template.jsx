@@ -13,15 +13,23 @@ const Post = ({ data }) => {
   return (
     <Layout>
       {/* posts title */}
-      <span style={{ marginRight: '16px' }}>{frontmatter.category || 'test'}</span>
-      <span className="gray-color">{frontmatter.created.replaceAll('-', '.')}</span>
-
+      <span style={{ marginRight: '16px' }}>{frontmatter.category || '카테고리 없음'}</span>
+      <span className="gray-color">{frontmatter.created.replaceAll('-', '.') || '날짜 없음'}</span>
       <h1 style={{ fontSize: '40px', marginBottom: '24px' }}>{frontmatter.title}</h1>
 
+      {/* posts body */}
       <MarkdownHTML dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
       <div className="table-of-contents" dangerouslySetInnerHTML={{ __html: markdownRemark.tableOfContents }} />
 
       {/* posts botton */}
+      <div style={{ display: 'flex', marginTop: '16px', gap : '10px' }}>
+        <div className='flex-helf box-border-round prebtn'>
+          이전
+        </div>
+        <div className='flex-helf box-border-round nextbtn'>
+          다음
+        </div>
+      </div>
 
     </Layout>
   )
