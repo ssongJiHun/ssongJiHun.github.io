@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkblogs=self.webpackChunkblogs||[]).push([[230],{4771:function(e,t,l){l.r(t),l.d(t,{Head:function(){return c}});var s=l(9953),u=l(7743),n=l(1120);t.default=()=>((0,s.useEffect)((()=>{(0,u.c4)("/posts",{replace:!0})}),[]),(0,n.tZ)("div",null));const c=()=>(0,n.tZ)("title",null,"송지훈 블로그 HOME")}}]);
+//# sourceMappingURL=component---src-pages-index-jsx-deb8682e201c46a006eb.js.map
