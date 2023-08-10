@@ -49,703 +49,696 @@
       }
     })
   </script></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>송지훈 | 개발자</title><style>
-    /* cspell:disable-file */
-    /* webkit printing magic: print all background colors */
-    html {
-        -webkit-print-color-adjust: exact;
-    }
-    * {
-        box-sizing: border-box;
-        -webkit-print-color-adjust: exact;
-    }
-    
-    html,
-    body {
-        margin: 0;
-        padding: 0;
-    }
-    @media only screen {
-        body {
-            margin: 2em auto;
-            max-width: 900px;
-            color: rgb(55, 53, 47);
-        }
-    }
-    
-    body {
-        line-height: 1.5;
-        white-space: pre-wrap;
-    }
-    
-    a,
-    a.visited {
-        color: inherit;
-        text-decoration: underline;
-    }
-    
-    .pdf-relative-link-path {
-        font-size: 80%;
-        color: #444;
-    }
-    
-    h1,
-    h2,
-    h3 {
-        letter-spacing: -0.01em;
-        line-height: 1.2;
-        font-weight: 600;
-        margin-bottom: 0;
-    }
-    
-    .page-title {
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin-top: 0;
-        margin-bottom: 0.75em;
-    }
-    
-    h1 {
-        font-size: 1.875rem;
-        margin-top: 1.875rem;
-    }
-    
-    h2 {
-        font-size: 1.5rem;
-        margin-top: 1.5rem;
-    }
-    
-    h3 {
-        font-size: 1.25rem;
-        margin-top: 1.25rem;
-    }
-    
-    .source {
-        border: 1px solid #ddd;
-        border-radius: 3px;
-        padding: 1.5em;
-        word-break: break-all;
-    }
-    
-    .callout {
-        border-radius: 3px;
-        padding: 1rem;
-    }
-    
-    figure {
-        margin: 1.25em 0;
-        page-break-inside: avoid;
-    }
-    
-    figcaption {
-        opacity: 0.5;
-        font-size: 85%;
-        margin-top: 0.5em;
-    }
-    
-    mark {
-        background-color: transparent;
-    }
-    
-    .indented {
-        padding-left: 1.5em;
-    }
-    
-    hr {
-        background: transparent;
-        display: block;
-        width: 100%;
-        height: 1px;
-        visibility: visible;
-        border: none;
-        border-bottom: 1px solid rgba(55, 53, 47, 0.09);
-    }
-    
-    img {
-        max-width: 100%;
-    }
-    
-    @media only print {
-        img {
-            max-height: 100vh;
-            object-fit: contain;
-        }
-    }
-    
-    @page {
-        margin: 1in;
-    }
-    
-    .collection-content {
-        font-size: 0.875rem;
-    }
-    
-    .column-list {
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .column {
-        padding: 0 1em;
-    }
-    
-    .column:first-child {
-        padding-left: 0;
-    }
-    
-    .column:last-child {
-        padding-right: 0;
-    }
-    
-    .table_of_contents-item {
-        display: block;
-        font-size: 0.875rem;
-        line-height: 1.3;
-        padding: 0.125rem;
-    }
-    
-    .table_of_contents-indent-1 {
-        margin-left: 1.5rem;
-    }
-    
-    .table_of_contents-indent-2 {
-        margin-left: 3rem;
-    }
-    
-    .table_of_contents-indent-3 {
-        margin-left: 4.5rem;
-    }
-    
-    .table_of_contents-link {
-        text-decoration: none;
-        opacity: 0.7;
-        border-bottom: 1px solid rgba(55, 53, 47, 0.18);
-    }
-    
-    table,
-    th,
-    td {
-        border: 1px solid rgba(55, 53, 47, 0.09);
-        border-collapse: collapse;
-    }
-    
-    table {
-        border-left: none;
-        border-right: none;
-    }
-    
-    th,
-    td {
-        font-weight: normal;
-        padding: 0.25em 0.5em;
-        line-height: 1.5;
-        min-height: 1.5em;
-        text-align: left;
-    }
-    
-    th {
-        color: rgba(55, 53, 47, 0.6);
-    }
-    
-    ol,
-    ul {
-        margin: 0;
-        margin-block-start: 0.6em;
-        margin-block-end: 0.6em;
-    }
-    
-    li > ol:first-child,
-    li > ul:first-child {
-        margin-block-start: 0.6em;
-    }
-    
-    ul > li {
-        list-style: disc;
-    }
-    
-    ul.to-do-list {
-        padding-inline-start: 0;
-    }
-    
-    ul.to-do-list > li {
-        list-style: none;
-    }
-    
-    .to-do-children-checked {
-        text-decoration: line-through;
-        opacity: 0.375;
-    }
-    
-    ul.toggle > li {
-        list-style: none;
-    }
-    
-    ul {
-        padding-inline-start: 1.7em;
-    }
-    
-    ul > li {
-        padding-left: 0.1em;
-    }
-    
-    ol {
-        padding-inline-start: 1.6em;
-    }
-    
-    ol > li {
-        padding-left: 0.2em;
-    }
-    
-    .mono ol {
-        padding-inline-start: 2em;
-    }
-    
-    .mono ol > li {
-        text-indent: -0.4em;
-    }
-    
-    .toggle {
-        padding-inline-start: 0em;
-        list-style-type: none;
-    }
-    
-    /* Indent toggle children */
-    .toggle > li > details {
-        padding-left: 1.7em;
-    }
-    
-    .toggle > li > details > summary {
-        margin-left: -1.1em;
-    }
-    
-    .selected-value {
-        display: inline-block;
-        padding: 0 0.5em;
-        background: rgba(206, 205, 202, 0.5);
-        border-radius: 3px;
-        margin-right: 0.5em;
-        margin-top: 0.3em;
-        margin-bottom: 0.3em;
-        white-space: nowrap;
-    }
-    
-    .collection-title {
-        display: inline-block;
-        margin-right: 1em;
-    }
-    
-    .page-description {
-        margin-bottom: 2em;
-    }
-    
-    .simple-table {
-        margin-top: 1em;
-        font-size: 0.875rem;
-        empty-cells: show;
-    }
-    .simple-table td {
-        height: 29px;
-        min-width: 120px;
-    }
-    
-    .simple-table th {
-        height: 29px;
-        min-width: 120px;
-    }
-    
-    .simple-table-header-color {
-        background: rgb(247, 246, 243);
-        color: black;
-    }
-    .simple-table-header {
-        font-weight: 500;
-    }
-    
-    time {
-        opacity: 0.5;
-    }
-    
-    .icon {
-        display: inline-block;
-        max-width: 1.2em;
-        max-height: 1.2em;
-        text-decoration: none;
-        vertical-align: text-bottom;
-        margin-right: 0.5em;
-    }
-    
-    img.icon {
-        border-radius: 3px;
-    }
-    
-    .user-icon {
-        width: 1.5em;
-        height: 1.5em;
-        border-radius: 100%;
-        margin-right: 0.5rem;
-    }
-    
-    .user-icon-inner {
-        font-size: 0.8em;
-    }
-    
-    .text-icon {
-        border: 1px solid #000;
-        text-align: center;
-    }
-    
-    .page-cover-image {
-        display: block;
-        object-fit: cover;
-        width: 100%;
-        max-height: 30vh;
-    }
-    
-    .page-header-icon {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-    }
-    
-    .page-header-icon-with-cover {
-        margin-top: -0.72em;
-        margin-left: 0.07em;
-    }
-    
-    .page-header-icon img {
-        border-radius: 3px;
-    }
-    
-    .link-to-page {
-        margin: 1em 0;
-        padding: 0;
-        border: none;
-        font-weight: 500;
-    }
-    
-    p > .user {
-        opacity: 0.5;
-    }
-    
-    td > .user,
-    td > time {
-        white-space: nowrap;
-    }
-    
-    input[type="checkbox"] {
-        transform: scale(1.5);
-        margin-right: 0.6em;
-        vertical-align: middle;
-    }
-    
-    p {
-        margin-top: 0.5em;
-        margin-bottom: 0.5em;
-    }
-    
-    .image {
-        border: none;
-        margin: 1.5em 0;
-        padding: 0;
-        border-radius: 0;
-        text-align: center;
-    }
-    
-    .code,
-    code {
-        background: rgba(135, 131, 120, 0.15);
-        border-radius: 3px;
-        padding: 0.2em 0.4em;
-        border-radius: 3px;
-        font-size: 85%;
-        tab-size: 2;
-    }
-    
-    code {
-        color: #eb5757;
-    }
-    
-    .code {
-        padding: 1.5em 1em;
-    }
-    
-    .code-wrap {
-        white-space: pre-wrap;
-        word-break: break-all;
-    }
-    
-    .code > code {
-        background: none;
-        padding: 0;
-        font-size: 100%;
-        color: inherit;
-    }
-    
-    blockquote {
-        font-size: 1.25em;
-        margin: 1em 0;
-        padding-left: 1em;
-        border-left: 3px solid rgb(55, 53, 47);
-    }
-    
-    .bookmark {
-        text-decoration: none;
-        max-height: 8em;
-        padding: 0;
-        display: flex;
-        width: 100%;
-        align-items: stretch;
-    }
-    
-    .bookmark-title {
-        font-size: 0.85em;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        height: 1.75em;
-        white-space: nowrap;
-    }
-    
-    .bookmark-text {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .bookmark-info {
-        flex: 4 1 180px;
-        padding: 12px 14px 14px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    
-    .bookmark-image {
-        width: 33%;
-        flex: 1 1 180px;
-        display: block;
-        position: relative;
-        object-fit: cover;
-        border-radius: 1px;
-    }
-    
-    .bookmark-description {
-        color: rgba(55, 53, 47, 0.6);
-        font-size: 0.75em;
-        overflow: hidden;
-        max-height: 4.5em;
-        word-break: break-word;
-    }
-    
-    .bookmark-href {
-        font-size: 0.75em;
-        margin-top: 0.25em;
-    }
-    
-    .sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
-    .code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
-    .serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
-    .mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
-    .pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
-    .pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
-    .pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
-    .pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
-    .pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
-    .pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
-    .pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
-    .pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
-    .pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
-    .pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
-    .pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
-    .pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
-    .pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
-    .pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
-    .pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
-    .pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
-    .highlight-default {
-        color: rgba(55, 53, 47, 1);
-    }
-    .highlight-gray {
-        color: rgba(120, 119, 116, 1);
-        fill: rgba(120, 119, 116, 1);
-    }
-    .highlight-brown {
-        color: rgba(159, 107, 83, 1);
-        fill: rgba(159, 107, 83, 1);
-    }
-    .highlight-orange {
-        color: rgba(217, 115, 13, 1);
-        fill: rgba(217, 115, 13, 1);
-    }
-    .highlight-yellow {
-        color: rgba(203, 145, 47, 1);
-        fill: rgba(203, 145, 47, 1);
-    }
-    .highlight-teal {
-        color: rgba(68, 131, 97, 1);
-        fill: rgba(68, 131, 97, 1);
-    }
-    .highlight-blue {
-        color: rgba(51, 126, 169, 1);
-        fill: rgba(51, 126, 169, 1);
-    }
-    .highlight-purple {
-        color: rgba(144, 101, 176, 1);
-        fill: rgba(144, 101, 176, 1);
-    }
-    .highlight-pink {
-        color: rgba(193, 76, 138, 1);
-        fill: rgba(193, 76, 138, 1);
-    }
-    .highlight-red {
-        color: rgba(212, 76, 71, 1);
-        fill: rgba(212, 76, 71, 1);
-    }
-    .highlight-gray_background {
-        background: rgba(241, 241, 239, 1);
-    }
-    .highlight-brown_background {
-        background: rgba(244, 238, 238, 1);
-    }
-    .highlight-orange_background {
-        background: rgba(251, 236, 221, 1);
-    }
-    .highlight-yellow_background {
-        background: rgba(251, 243, 219, 1);
-    }
-    .highlight-teal_background {
-        background: rgba(237, 243, 236, 1);
-    }
-    .highlight-blue_background {
-        background: rgba(231, 243, 248, 1);
-    }
-    .highlight-purple_background {
-        background: rgba(244, 240, 247, 0.8);
-    }
-    .highlight-pink_background {
-        background: rgba(249, 238, 243, 0.8);
-    }
-    .highlight-red_background {
-        background: rgba(253, 235, 236, 1);
-    }
-    .block-color-default {
-        color: inherit;
-        fill: inherit;
-    }
-    .block-color-gray {
-        color: rgba(120, 119, 116, 1);
-        fill: rgba(120, 119, 116, 1);
-    }
-    .block-color-brown {
-        color: rgba(159, 107, 83, 1);
-        fill: rgba(159, 107, 83, 1);
-    }
-    .block-color-orange {
-        color: rgba(217, 115, 13, 1);
-        fill: rgba(217, 115, 13, 1);
-    }
-    .block-color-yellow {
-        color: rgba(203, 145, 47, 1);
-        fill: rgba(203, 145, 47, 1);
-    }
-    .block-color-teal {
-        color: rgba(68, 131, 97, 1);
-        fill: rgba(68, 131, 97, 1);
-    }
-    .block-color-blue {
-        color: rgba(51, 126, 169, 1);
-        fill: rgba(51, 126, 169, 1);
-    }
-    .block-color-purple {
-        color: rgba(144, 101, 176, 1);
-        fill: rgba(144, 101, 176, 1);
-    }
-    .block-color-pink {
-        color: rgba(193, 76, 138, 1);
-        fill: rgba(193, 76, 138, 1);
-    }
-    .block-color-red {
-        color: rgba(212, 76, 71, 1);
-        fill: rgba(212, 76, 71, 1);
-    }
-    .block-color-gray_background {
-        background: rgba(241, 241, 239, 1);
-    }
-    .block-color-brown_background {
-        background: rgba(244, 238, 238, 1);
-    }
-    .block-color-orange_background {
-        background: rgba(251, 236, 221, 1);
-    }
-    .block-color-yellow_background {
-        background: rgba(251, 243, 219, 1);
-    }
-    .block-color-teal_background {
-        background: rgba(237, 243, 236, 1);
-    }
-    .block-color-blue_background {
-        background: rgba(231, 243, 248, 1);
-    }
-    .block-color-purple_background {
-        background: rgba(244, 240, 247, 0.8);
-    }
-    .block-color-pink_background {
-        background: rgba(249, 238, 243, 0.8);
-    }
-    .block-color-red_background {
-        background: rgba(253, 235, 236, 1);
-    }
-    .select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
-    .select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
-    .select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
-    .select-value-color-green { background-color: rgba(219, 237, 219, 1); }
-    .select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
-    .select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
-    .select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
-    .select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
-    .select-value-color-red { background-color: rgba(255, 226, 221, 1); }
-    .select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
-    .select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
-    .select-value-color-pageGlass { background-color: undefined; }
-    .select-value-color-washGlass { background-color: undefined; }
-    
-    .checkbox {
-        display: inline-flex;
-        vertical-align: text-bottom;
-        width: 16;
-        height: 16;
-        background-size: 16px;
-        margin-left: 2px;
-        margin-right: 5px;
-    }
-    
-    .checkbox-on {
-        background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
-    }
-    
-    .checkbox-off {
-        background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
-    }
-        
-    </style></head><body><article id="4580791f-aadc-4b2f-814a-8d89d2736aa5" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">👔</span></div><h1 class="page-title">송지훈 | 개발자</h1><p class="page-description"></p></header><div class="page-body"><p id="bc1e6fe3-ff17-46a0-b44e-dd4428fa2538" class="">1년차 개발자 송지훈입니다. 클린코드를 지향하며,  스스로 문제점을 찾기 위해서 노력하고, 지속적인 리펙토링을 통해 고도화 작업 즐겨합니다.</p><p id="19c42070-5db4-4f4a-a076-d1d8062a2fdc" class="">또한 편리하고 속도가 빠른 개발을 위해 테스트 주도 개발(TDD)를 지향하며, 개인적인 성장과 회사 문화를 위해서 코드리뷰를 선호합니다.</p><p id="c58cd85a-f8a5-406a-8822-823e97d37212" class="">사용자가 편리하게 사용할 수 있고, 거부감이 없는 프론트엔드 개발자로 성장하기 위해 노력하고 있습니다. </p><p id="04ca9c00-b177-426b-8c41-645c13e445d7" class="">
-    </p><hr id="56185ea6-6c80-49a5-ab6d-afc1451608a9"/><h2 id="37e8cacc-7e81-4159-bb10-b3a5387ed81a" class=""><mark class="highlight-brown"><strong>Contact</strong></mark></h2><p id="f9ad6b19-3ca8-4c32-b006-2a2c4962fb33" class="">
-    </p><p id="167974a1-2b4b-45c2-b2e7-fc63439d1946" class="">Email : dev.wlgns.song@gmail.com</p><p id="5edc5a6a-19e3-41c0-83da-523d1ed33e57" class="">Phone : 010-9130-0723</p><p id="d5fba942-5959-40cb-8c12-c427bc672712" class="">Blog : <a href="https://velog.io/@jihoon_song">https://velog.io/@jihoon_song</a></p><p id="f1b28ba2-4157-4c8b-bad9-1313ff5eb03e" class="">GitHub : <a href="https://github.com/ssongJiHun">https://github.com/ssongJiHun</a></p><p id="16d9395a-57a3-4c25-adda-54fb433b2147" class="">
-    </p><hr id="c4f2fc10-9981-4d93-a0b5-f5cea219219f"/><h2 id="a6b0f437-ef2f-4a46-8510-1ed78c86357f" class=""><mark class="highlight-brown"><strong>Work Experience.</strong></mark></h2><div id="874a1f39-e962-46ee-a0f3-d3a990794678" class="column-list"><div id="403df373-3de5-4b46-bdd1-c951daf01c9c" style="width:43.75%" class="column"><h2 id="112c3fbb-a30d-42f3-9441-21d404305af5" class=""><mark class="highlight-gray"><span style="border-bottom:0.05em solid"><strong>천재교과서</strong></span></mark></h2><p id="6e19d38e-a0d2-4c47-8ad7-17e72fd89c89" class="">웹 개발자 </p><p id="a14e8e19-1173-4123-a7a7-3c46de3c95c9" class="">2023.01 ~ 현재</p><p id="90cbf5f0-14fc-41b4-bf01-d66ee947d91f" class="">중고학습개발팀 밀크T</p><p id="c96b820f-6b44-4598-a48a-ab58fdb51b84" class="">ASP, Vue, MSSQL</p><p id="ed8a0a4c-2e9f-4aa1-8103-ce39172d6e32" class="">
-    </p><p id="23fcfbf2-40ad-42aa-b651-e3f45a05168f" class="">
-    </p><p id="4d30309a-40c8-42a2-a269-826ae90b90f7" class="">
-    </p><p id="c973e77f-68a2-42ea-985f-457d031a77d0" class="">
-    </p><p id="0c2711bb-3cb1-4631-894f-952c95a5f37d" class="">
-    </p><p id="beb603a8-75c6-4d4f-8caa-7eda33727acd" class="">
-    </p><h2 id="cdfe97e4-4233-4b8c-808f-55336dfeb2a6" class=""><mark class="highlight-gray"><span style="border-bottom:0.05em solid"><strong>소더코드</strong></span></mark></h2><p id="e7def3eb-829f-45ce-a253-c01c4774aaaf" class="">소프트웨어 개발자</p><p id="db9d3112-935c-4d6e-88ec-feefa9a73655" class="">2022.07 ~ 2023.01</p><p id="6f9d5747-c1fe-411b-a64c-278271b3b7da" class=""><a href="https://www.sothecode.com/"><em>https://www.sothecode.com/</em></a></p><p id="79e714c6-43d2-43bc-b06c-8d562bb81277" class="">REACT, NodeJS, Android</p><p id="3f4731f4-4d51-4ddc-8020-ed961f3f205d" class="">
-    </p></div><div id="9eb3c053-8b57-42c9-b4bf-ebde082b2f18" style="width:100%" class="column"><p id="71ef773b-b941-41d6-8db9-010c89ea12c3" class="">
-    </p><ul id="828850ec-dd78-4c78-b246-d90b05047502" class="bulleted-list"><li style="list-style-type:disc">밀크T 중등/고등 전체 <a href="https://www.notion.so/4580791faadc4b2f814a8d89d2736aa5?pvs=21">SPA-Vue Framwrok 마이그레이션 및 고도화,</a></li></ul><ul id="a82cdf74-9cca-4c52-8b7f-7024697bcba5" class="bulleted-list"><li style="list-style-type:disc">IE지원을 위해 <a href="https://www.notion.so/4580791faadc4b2f814a8d89d2736aa5?pvs=21">라이브리리 CDN 캐쉬작업 및 트랜스 파일러</a></li></ul><ul id="eb631463-df3a-4357-9b38-1896ac70dfc5" class="bulleted-list"><li style="list-style-type:disc">웹팩 및 트리쉐이킹 최적화 / 초기 느린 속도 단점을 개선</li></ul><ul id="e896c2fb-748f-48ad-a064-433b8e0a3b11" class="bulleted-list"><li style="list-style-type:disc">누적 2000건의 단원평가 시험서비스 오픈,  기존의 <a href="https://www.notion.so/4580791faadc4b2f814a8d89d2736aa5?pvs=21">.NET ASP 서버사이드스크립트를 프론트와 백엔드 분리하여 </a>생산성 및 추후 유연한 구조변경 가능성 증가 , REST API 도입</li></ul><ul id="f0d87aa7-6fc7-4a5e-bd2b-3656c3452c9e" class="bulleted-list"><li style="list-style-type:disc">비동기사용하여  ASP PostBack 감소하여 재렌더링 감소로 인해 사용자 편의속도 및 코드 가독성 개선</li></ul><ul id="baa6743f-7e58-4cec-b47e-29e069f40905" class="bulleted-list"><li style="list-style-type:disc">어드민페이지 쪽지 발송 시스템  HTML 파싱방식 변경 및 DB구조 변경으로인한 재생산성 증가 및 리소스 낭비 감소</li></ul><p id="8d90e6af-e016-422b-923c-197bd189ef3c" class="">
-    </p><p id="33e0c7fa-0e91-4c05-9e91-fc4c0d87f7c4" class="">
-    </p><ul id="1e28fd29-8ba3-4443-b1a7-42fde5987fba" class="bulleted-list"><li style="list-style-type:disc">React Framwork기반의 ERP 시스템 설계 및 개발</li></ul><ul id="2206b7c1-cf81-47cf-956b-787932c1c6ca" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.notion.so/4580791faadc4b2f814a8d89d2736aa5?pvs=21">React-Query 도입</a>하여 서버 데이터와 클라이언트 데이터 상태를 구별하여 / 생산성 증가</li></ul><ul id="6baef267-a765-4a35-a9f8-b297a8051677" class="bulleted-list"><li style="list-style-type:disc">ERP시스템에 <a href="https://www.notion.so/4580791faadc4b2f814a8d89d2736aa5?pvs=21">JWT를 이용하여 AccessToken과 RefreshToken</a>을 도입하여 기존의 로그인 유지 기능 강화 및 보안 이슈 개선</li></ul><ul id="b98d2bf9-b895-4f87-885d-68c3a2db0edf" class="bulleted-list"><li style="list-style-type:disc">기존 수질관리측정기로부터 Pub/Sub 도입하여 사용자의 문자 및 카카오톡으로 실시간 수질 관련 정보 전달 시스템 도입</li></ul><ul id="35ed5e70-fdf8-4a73-84c3-7ed86554bcda" class="bulleted-list"><li style="list-style-type:disc">여행정보사이트 “투비롱”  빠른 렌더링과 높은 생산성을 위해서 바닐라자바스크립트→ React 프레임워크 마이그레이션</li></ul></div></div><p id="5cac1c46-1486-459c-a0a5-5a17bbef391f" class="">
-    </p><hr id="9475484f-f338-4c06-966f-771b63f01e8d"/><h2 id="c10d8ac8-c477-4107-bc8f-24c38c169929" class=""><mark class="highlight-brown">Private Projects</mark></h2><p id="723e96eb-00d1-4415-b5d1-f43b3e0f9977" class="">
-    </p><p id="7af83ef8-4f30-47a1-9c69-ad65de880a3c" class="">
-    </p><hr id="d28bdf23-934f-4ddc-8028-bf79d44db363"/><h2 id="d592d77f-6379-4942-a203-a646627c9d07" class=""><strong><mark class="highlight-brown">Other Experience</mark></strong></h2><p id="19f9c332-a512-4598-ab5d-70e1624173d3" class="">게임개발</p><p id="e0b0a312-0d98-4d09-8e36-116e4076c5cf" class="">
-    </p><p id="ab5ae895-fe5b-4291-af27-e298bf0b1143" class="">
-    </p><p id="53b8a175-58d9-4236-84a5-bc845505caf6" class="">
-    </p><hr id="856dfe1d-5e5f-48e1-9ed2-4620ff7d753a"/><h2 id="f7f69987-b140-4920-b359-98d72ea2f530" class=""><mark class="highlight-brown"><strong>Eudcation</strong></mark></h2><p id="593bd709-dc78-4a7a-8da1-83c8aefc508c" class=""><strong>호서대학교</strong> 컴퓨터소프트웨어학과      | 2016.03 ~ 2023.08</p><p id="6f03d238-f828-4a5e-9288-a2f39f92ca4a" class=""><strong>한국게임과학고등학교</strong> 프로그래밍 전공 | 2014.03  ~ 2016.02</p></div></article></body></html></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/about/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="4580791f-aadc-4b2f-814a-8d89d2736aa5" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">👔</span></div><h1 class="page-title">송지훈 | 개발자</h1><p class="page-description"></p></header><div class="page-body"><p id="bc1e6fe3-ff17-46a0-b44e-dd4428fa2538" class="">2년차 개발자 송지훈입니다. 항상 왜(Why)라는 마인드를 가지고 코드를 접근합니다. 클린코드를 지향하며, 스스로 문제점을 찾기 위해서 노력하고, 지속적인 리펙토링을 통해 고도화 작업 즐겨합니다.</p><p id="19c42070-5db4-4f4a-a076-d1d8062a2fdc" class="">또한 편리하고 속도가 빠른 개발을 위해 테스트 주도 개발(TDD)를 지향하며, 개인적인 성장과 회사 문화를 위해서 코드리뷰를 선호합니다. 생산성ㄴ</p><p id="c58cd85a-f8a5-406a-8822-823e97d37212" class="">사용자가 편리하게 사용할 수 있고, 거부감이 없는 프론트엔드 개발자로 성장하기 위해 노력하고 있습니다. </p><p id="04ca9c00-b177-426b-8c41-645c13e445d7" class="">
+</p><hr id="56185ea6-6c80-49a5-ab6d-afc1451608a9"/><h2 id="37e8cacc-7e81-4159-bb10-b3a5387ed81a" class=""><strong><mark class="highlight-brown">Contact.</mark></strong></h2><p id="167974a1-2b4b-45c2-b2e7-fc63439d1946" class="">Email : dev.wlgns.song@gmail.com</p><p id="5edc5a6a-19e3-41c0-83da-523d1ed33e57" class="">Phone : 010-9130-0723</p><p id="d5fba942-5959-40cb-8c12-c427bc672712" class="">Blog : <a href="https://velog.io/@jihoon_song">https://ssongjihun.github.io</a></p><p id="f1b28ba2-4157-4c8b-bad9-1313ff5eb03e" class="">GitHub : <a href="https://github.com/ssongJiHun">https://github.com/ssongJiHun</a></p><p id="16d9395a-57a3-4c25-adda-54fb433b2147" class="">
+</p><hr id="c4f2fc10-9981-4d93-a0b5-f5cea219219f"/><h2 id="a6b0f437-ef2f-4a46-8510-1ed78c86357f" class=""><mark class="highlight-brown"><strong>W</strong></mark><mark class="highlight-brown">ork Experience.</mark></h2><h2 id="3b470b2e-addd-44ad-bc88-cb07d9c34822" class=""><strong><mark class="highlight-gray"><span style="border-bottom:0.05em solid">천재교과서</span></mark></strong></h2><p id="aadaa4f3-d01e-49f4-b5cf-4c4dff2a4acb" class=""><a href="https://chunjaetext.co.kr/">https://chunjaetext.co.kr/</a></p><div id="6322fe79-088b-4f31-b0ff-5f04d57ce61b" class="column-list"><div id="fe8594f6-830c-46ca-971e-677d61817a7d" style="width:31.25%" class="column"><p id="0c9670a3-df48-46a7-ada6-3bd42c68fa68" class="">웹 개발자 </p><p id="c0e511bb-3269-4c2a-8df4-fc37113a271d" class="">2023.01 ~ 현재</p><p id="1a06a9ae-e4fa-4c9d-9724-5e78330400fb" class="">중고학습개발1팀 밀크T 중학</p><p id="993c2768-122f-43d7-ba4e-821dd7105616" class="">ASP.NET, VUE(SPA), MSSQL, Tortoise(svn)</p><p id="df5e67e1-9ae1-4d4d-994d-5e54049678c2" class="">
+</p></div><div id="ca1980b8-3360-49ad-aa7a-f4aece74f9dd" style="width:68.75%" class="column"><ul id="256ca6fc-0fdc-463e-ae53-ac174d9be158" class="bulleted-list"><li style="list-style-type:disc">밀크T 중등 웹/탭 부분 <a href="https://www.notion.so/4580791faadc4b2f814a8d89d2736aa5?pvs=21">VUE(SPA) Framwrok 마이그레이션 및 고도화,</a></li></ul><ul id="8c80993f-b6b5-4100-9919-68a152467049" class="bulleted-list"><li style="list-style-type:disc">IE지원을 위해 <a href="https://www.notion.so/4580791faadc4b2f814a8d89d2736aa5?pvs=21">라이브리리 CDN 캐쉬작업 및 트랜스 파일러</a></li></ul><ul id="6f606bab-7201-46b8-a003-ad8d9e1e783d" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.notion.so/4580791faadc4b2f814a8d89d2736aa5?pvs=21">웹팩 및 트리쉐이킹 최적화 / 초기 빌드 속도 단점을 개선</a></li></ul><ul id="51330821-e1b8-4023-bc13-ef968379f8c2" class="bulleted-list"><li style="list-style-type:disc">누적 10만건의 단원평가 시험서비스 개발 및 오픈,  기존의 <a href="https://www.notion.so/4580791faadc4b2f814a8d89d2736aa5?pvs=21">.NET ASP 서버사이드스크립트를 프론트와 백엔드 분리하여 </a>생산성 및 추후 유연한 구조변경 가능성 증가 , REST API 도입</li></ul><ul id="0114ccaa-7657-416a-8f74-78b0feed257f" class="bulleted-list"><li style="list-style-type:disc">기존 ASP의 동기식 렌더링 단점 보안을 위해 <a href="https://www.notion.so/4580791faadc4b2f814a8d89d2736aa5?pvs=21">비동기 렌더링 방식 채택</a>, UX 편의성 및 속도 개선 ( PostBack 감소 ) </li></ul><ul id="ec196b2e-47ed-4b3b-beea-53f1a908efa7" class="bulleted-list"><li style="list-style-type:disc">어드민페이지 쪽지 발송 시스템  HTML 파싱방식 변경 및 DB구조 변경으로인한 재생산성 증가 및 리소스 낭비 감소</li></ul><p id="f1beb645-825c-412c-b1c3-d630c7b9dd27" class="">
+</p></div></div><h2 id="a7bf4253-0040-4f77-ba13-8dd7d7f428e0" class=""><mark class="highlight-gray"><span style="border-bottom:0.05em solid"><strong>소더코드</strong></span></mark></h2><p id="25bd8979-c401-4bf4-a169-1f15f1fbb163" class=""><a href="https://www.sothecode.com/">https://www.sothecode.com/</a></p><div id="77f84047-1abc-4083-8cac-394234159e84" class="column-list"><div id="3be49b54-47d7-4d46-acf7-366acc1031d3" style="width:31.25%" class="column"><p id="adb9d08e-dbd6-4b59-a6f0-86d97f2b0071" class="">웹 개발자</p><p id="c50c3641-1312-472c-85d2-d96ba29eed95" class="">2022.07 ~ 2023.01</p><p id="aa1299da-4e19-435f-b72e-b095b1a3c557" class="">REACT(SPA), Node(Express), Git(svn), Android(webView)</p><p id="d95da6bd-af1c-4e3c-a713-580660e4d97f" class="">
+</p></div><div id="17cd1488-b04a-480e-8cd2-78431c75cbd5" style="width:68.75%" class="column"><ul id="259ac693-7042-4523-b16d-3b312fad33d6" class="bulleted-list"><li style="list-style-type:disc">React Framwork기반의 ERP 시스템 설계 및 개발(Full statck)</li></ul><ul id="91e72abc-b00c-47ba-8cf3-1f3163e7f733" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.notion.so/4580791faadc4b2f814a8d89d2736aa5?pvs=21">React-Query 도입</a>, 서버 데이터와 클라이언트 데이터 상태 구별 생산성 증가</li></ul><ul id="003b3854-63b5-439f-a477-b58e590abef3" class="bulleted-list"><li style="list-style-type:disc">로그인 유지 기능 강화 및 보안 이슈 개선을 위해 <a href="https://www.notion.so/4580791faadc4b2f814a8d89d2736aa5?pvs=21">JWT사용, AccessToken과 RefreshToken</a> 구성, 수질관리 시스템 및 신규 ERP시스템 도입 및 개선</li></ul><ul id="0b912058-fe66-4b48-8b32-305839474bc6" class="bulleted-list"><li style="list-style-type:disc">기존 수질관리측정기로부터 Pub/Sub 방식 사용하여 클라이언트의 SMS 및 카카오톡을 통해 실시간 수질 관련 정보 전달 시스템 개선</li></ul><ul id="ed40e4e4-f141-4e88-8663-ed51b8382c70" class="bulleted-list"><li style="list-style-type:disc">여행정보사이트 “투비롱”  빠른 렌더링과 높은 생산성을 위해서 바닐라자바스크립트→ React 프레임워크 마이그레이션</li></ul></div></div><p id="71ef773b-b941-41d6-8db9-010c89ea12c3" class="">
+</p><hr id="9475484f-f338-4c06-966f-771b63f01e8d"/><h2 id="c10d8ac8-c477-4107-bc8f-24c38c169929" class=""><mark class="highlight-brown">Private </mark><strong><mark class="highlight-brown">Experience.</mark></strong></h2><p id="10c00edf-cf89-467e-b55d-f9aa8c3261bd" class="">Gatsby 블로그 마이그레이션</p><p id="2e396915-c611-4952-bd52-cadb543443b3" class="">타입 스크립트를 사용한 마이그레이션</p><p id="d439f83e-91cf-460c-ba35-7b04fc0ce975" class="">기본 로그인 기능 (세션 및 쿠기) </p><p id="723e96eb-00d1-4415-b5d1-f43b3e0f9977" class="">
+</p><p id="7af83ef8-4f30-47a1-9c69-ad65de880a3c" class="">
+</p><hr id="d28bdf23-934f-4ddc-8028-bf79d44db363"/><h2 id="d592d77f-6379-4942-a203-a646627c9d07" class=""><strong><mark class="highlight-brown">Other Experience.</mark></strong></h2><p id="19f9c332-a512-4598-ab5d-70e1624173d3" class="">게임개발</p><p id="e0b0a312-0d98-4d09-8e36-116e4076c5cf" class="">
+</p><p id="ab5ae895-fe5b-4291-af27-e298bf0b1143" class="">
+</p><p id="53b8a175-58d9-4236-84a5-bc845505caf6" class="">
+</p><hr id="856dfe1d-5e5f-48e1-9ed2-4620ff7d753a"/><h2 id="f7f69987-b140-4920-b359-98d72ea2f530" class=""><mark class="highlight-brown"><strong>Eudcation.</strong></mark></h2><p id="593bd709-dc78-4a7a-8da1-83c8aefc508c" class=""><strong>호서대학교</strong> 컴퓨터소프트웨어학과      | 2016.03 ~ 2023.08</p><p id="6f03d238-f828-4a5e-9288-a2f39f92ca4a" class=""><strong>한국게임과학고등학교</strong> 프로그래밍 전공 | 2014.03  ~ 2016.02</p><p id="4bee550b-ed8e-4d49-bbc1-2c9c63b66773" class="">
+</p></div></article></body></html></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/about/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
           <script
             id="gatsby-chunk-mapping"
           >
-            window.___chunkMapping="{\"app\":[\"/app-71ccc123238664b48a7f.js\"],\"component---src-pages-404-jsx\":[\"/component---src-pages-404-jsx-a9d59796f9e5f0375405.js\"],\"component---src-pages-about-index-jsx\":[\"/component---src-pages-about-index-jsx-bd163af2d187a73afeb9.js\"],\"component---src-pages-index-jsx\":[\"/component---src-pages-index-jsx-deb8682e201c46a006eb.js\"],\"component---src-pages-posts-index-jsx\":[\"/component---src-pages-posts-index-jsx-946bc87e55cf2419f2ae.js\"],\"component---src-templates-post-template-jsx\":[\"/component---src-templates-post-template-jsx-a69c77b954c6265af93b.js\"]}";
+            window.___chunkMapping="{\"app\":[\"/app-71ccc123238664b48a7f.js\"],\"component---src-pages-404-jsx\":[\"/component---src-pages-404-jsx-a9d59796f9e5f0375405.js\"],\"component---src-pages-about-index-jsx\":[\"/component---src-pages-about-index-jsx-4f4a54e81753290f173a.js\"],\"component---src-pages-index-jsx\":[\"/component---src-pages-index-jsx-deb8682e201c46a006eb.js\"],\"component---src-pages-posts-index-jsx\":[\"/component---src-pages-posts-index-jsx-946bc87e55cf2419f2ae.js\"],\"component---src-templates-post-template-jsx\":[\"/component---src-templates-post-template-jsx-a69c77b954c6265af93b.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="b0ec663daa847253fd25";</script><script src="/webpack-runtime-ed097388ccd5fad12e59.js" async></script><script src="/framework-dab90126a1acf57bd372.js" async></script><script src="/app-71ccc123238664b48a7f.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="1b035763ef31c16ec58d";</script><script src="/webpack-runtime-0f794a0247dd13f1a02b.js" async></script><script src="/framework-dab90126a1acf57bd372.js" async></script><script src="/app-71ccc123238664b48a7f.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
