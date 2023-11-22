@@ -34,7 +34,7 @@ const dirName = './_static/post';
             + `title : ${title}\n`
             + 'category : ""\n'
             + `tags : "${tags}\n`
-            + `created: ${created}`
+            + `created: ${created}\n`
             + '---'
 
         // content
@@ -44,8 +44,8 @@ const dirName = './_static/post';
         // write md file 
         const fileName = `${dirName}/${title.replace(/ /g, '_') + created}.md`;
         fs.writeFile(fileName, mdString, (err) => {
-            if (err) console.log('fail wrting file')
-            else console.log('success writing file')
+            if (err) console.log('fail wrting file', fileName)
+            else console.log('success writing file', fileName)
         });
     }
 })();
