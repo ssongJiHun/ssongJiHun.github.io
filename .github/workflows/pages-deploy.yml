@@ -5,11 +5,16 @@ on:
 
 jobs:
   setting:
+
     runs-on: ubuntu-latest
+
     steps:
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v2
         with:
           node-version: "17"
+      - name : 'env echo'
+        run : echo 'DATABASE_NAME - ${{secrets.DATABASE_NAME}},  ${{secrets.NOTION_TOKEN}}'
 
       - name : 'generate Environment Varialbes'
         run: node _scripts/notion-import.js
