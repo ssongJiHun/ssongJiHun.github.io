@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 const { Client } = require("@notionhq/client");
 const { NotionToMarkdown } = require("notion-to-md");
 const fs = require("fs");
