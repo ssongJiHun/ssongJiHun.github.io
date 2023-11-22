@@ -30,11 +30,11 @@ const dirName = './_static/post';
         const tags = page.properties['태그'].multi_select.map(v => v.name).join(', ');
         const created = page.properties['날짜'].date.start;
         const frontmatter = '---\n'
-            + 'template : "post\n'
-            + `title : ${title}\n`
+            + 'template : "post"\n'
+            + `title : "${title}"\n`
             + 'category : ""\n'
-            + `tags : "${tags}\n`
-            + `created: ${created}\n`
+            + `tags : "${tags}"\n`
+            + `created: "${created}"\n`
             + '---'
 
         // content
