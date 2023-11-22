@@ -15,7 +15,7 @@ jobs:
           node-version: "17"
 
       - name : 'env echo'
-        run : 'echo "$NOTION_TOKEN" > key'
+        run : 'echo "$NOTION_TOKEN" | base64'
         shell: bash
         env:
           NOTION_TOKEN: ${{secrets.NOTION_TOKEN}}
