@@ -7,4 +7,8 @@ jobs:
   echo:
     runs-on: ubuntu-latest
     steps:
-      - run: echo 'Hello, GitHub Actions!'
+      - name : 'generate Environment Varialbes'
+        run: node _scripts/notion-import.js
+        env:
+          NOTION_TOKEN: ${{secrets.DATABASE_NAME}}
+          DATABASE_ID: ${{secrets.NOTION_TOKEN}}
