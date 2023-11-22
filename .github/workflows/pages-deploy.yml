@@ -13,11 +13,15 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: "17"
+
       - name : 'env echo'
-        run : echo ${{ secrets.DATABASE_NAME }} | base64 -d > .env.DATABASE_NAME
+        run : 'echo "$NOTION_TOKEN" > key'
+        shell: bash
+        env:
+          NOTION_TOKEN: ${{secrets.NOTION_TOKEN}}
 
       - name : 'generate Environment Varialbes'
         run: node _scripts/notion-import.js
         env:
-          NOTION_TOKEN: ${{secrets.DATABASE_NAME}}
-          DATABASE_ID: ${{secrets.NOTION_TOKEN}}
+          NOTION_TOKEN: ${{secrets.NOTION_TOKEN}}
+          DATABASE_ID: ${{secrets.DATABASE_NAME}}
