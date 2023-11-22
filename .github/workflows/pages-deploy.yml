@@ -4,14 +4,12 @@ on:
     types: [RUN_WORKFLOW_DISPATCH]
 
 jobs:
-  echo:
+  setting:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-node@v2
         with:
           node-version: "17"
-
-      - run: npm install
 
       - name : 'generate Environment Varialbes'
         run: node _scripts/notion-import.js
