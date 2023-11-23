@@ -1,7 +1,7 @@
-name: "BLOG Build"
+name: "NOTION COMMIT AND DEPLOY"
 on:
   repository_dispatch:
-    types: [RUN_WORKFLOW_DISPATCH]
+    types: [RUN_REPOSITORY_DISPATCH_NOTION]
 
 jobs:
   setting:
