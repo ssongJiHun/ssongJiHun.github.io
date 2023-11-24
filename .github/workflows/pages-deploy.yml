@@ -33,7 +33,7 @@ jobs:
 
       # notion blog database 접근 md 파일 생성
       - name : 'notion database access'
-        run: node _action/notion-import.js
+        run: node _action/notion-blog-import.js
         env:
           NOTION_TOKEN: ${{secrets.NOTION_TOKEN}}
           NOTION_BLOG_DB_ID: ${{secrets.NOTION_BLOG_DB_ID}}
