@@ -24,47 +24,62 @@ const dirName = './_static/post';
     const { results: pages } = await notion.databases.query({
         database_id: databaseId,
         filter: {
-            property: "공개",
-            checkbox: {
-                equals: true,
-            },
+            and:
+                [
+                    { property: '타이틀', title: { is_not_empty: true } },
+                    { property: '카테고리', select: { is_not_empty: true } },
+                    { property: '날짜', date: { is_not_empty: true } },
+                    { property: '공개', checkbox: { equals: true } }
+                ],
         },
     });
 
-    for (const page of pages) {
-        // frontmatter
-        const title = page.properties['타이틀'].title[0].plain_text;
-        const tags = page.properties['태그'].multi_select.map(v => v.name).join(', ');
-        const created = page.properties['날짜'].date.start;
-        const frontmatter = '---\n'
-            + 'template : "post"\n'
-            + `title : "${title}"\n`
-            + 'category : ""\n'
-            + `tags : "${tags}"\n`
-            + `created: "${created}"\n`
-            + '---'
 
-        // content
-        const mdblocks = await n2m.pageToMarkdown(page.id);
-        const mdString = frontmatter.concat('\n', n2m.toMarkdownString(mdblocks).parent);
-        const newTitle = title.replace(/ |\\|\/|\:|\*|\?|\"|\<|\>|\|/g, (m) => m !== ' ' ? btoa(m) : '_') + created;
-        const fileName = `${dirName}/${newTitle}.md`;
+    // notion === reop
+    const reopFileNames = fs.readdirSync(dirName);
+    const notionFileNames = pages.map(({ properties }) => {
+        const title = properties['타이틀'].title[0].plain_text;
+        const created = properties['날짜'].date.start;
+        return title.replace(/ |\\|\/|\:|\*|\?|\"|\<|\>|\|/g, (m) => m !== ' ' ? btoa(m) : '_') + created + '.md';
+    });
+    const deletedFilesNames = reopFileNames.filter(v => !notionFileNames.includes(v));
+    deletedFilesNames.forEach(name => fs.promises.unlink(`${dirName}/${name}`).then(console.log('delete file', `${dirName}/${name}`)));
 
-        // exsists md file
-        if (fs.existsSync(fileName)) {
-            const notionHash = await hash(Buffer.from(mdString));
-            const repoHash = await hash(fs.readFileSync(fileName));
+    const pageToMarkdown = (page) => {
+        return new Promise(async (resolve) => {
+            // frontmatter
+            const title = page.properties['타이틀'].title[0].plain_text;
+            const tags = page.properties['태그'].multi_select.map(v => v.name).join(', ');
+            const created = page.properties['날짜'].date.start;
+            const frontmatter = '---\n'
+                + 'template : "post"\n'
+                + `title : "${title}"\n`
+                + 'category : ""\n'
+                + `tags : "${tags}"\n`
+                + `created: "${created}"\n`
+                + '---'
 
-            if (notionHash === repoHash) {
-                console.log('equal file content', fileName)
-                continue;
+            // content
+            const mdblocks = await n2m.pageToMarkdown(page.id);
+            const mdString = frontmatter.concat('\n', n2m.toMarkdownString(mdblocks).parent);
+            const newTitle = title.replace(/ |\\|\/|\:|\*|\?|\"|\<|\>|\|/g, (m) => m !== ' ' ? btoa(m) : '_') + created;
+            const fileName = `${dirName}/${newTitle}.md`;
+
+            // i/o 최적화
+            if (fs.existsSync(fileName)) {
+                const notionHash = await hash(Buffer.from(mdString));
+                const repoHash = await hash(fs.readFileSync(fileName));
+
+                if (notionHash === repoHash) resolve('equal file content\t' + fileName)
             }
-        }
 
-        // write md file 
-        fs.writeFile(fileName, mdString, (err) => {
-            if (err) console.log('fail wrting file', fileName)
-            else console.log('success writing file', fileName)
-        });
+            // write md file 
+            fs.writeFile(fileName, mdString, (err) => {
+                if (err) resolve('fail wrting file\t' + fileName);
+                else resolve('success wrting file\t' + fileName);
+            });
+        })
     }
+
+    pages.forEach(page => pageToMarkdown(page).then(console.log))
 })();
