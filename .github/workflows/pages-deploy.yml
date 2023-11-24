@@ -32,7 +32,7 @@ jobs:
         run: npm install
 
       # notion blog database 접근 md 파일 생성
-      - name : 'notion database access'
+      - name : 'notion database access And update File'
         run: node _action/notion-blog-import.js
         env:
           NOTION_TOKEN: ${{secrets.NOTION_TOKEN}}
@@ -41,7 +41,7 @@ jobs:
       # 빌드 및 commit
 
       # 생성된 파일 commit
-      - name: Add date and push
+      - name: push
         run: |
           git add .
           git config --global user.email "ssongJiHuns@github.com"
