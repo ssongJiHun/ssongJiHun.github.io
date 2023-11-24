@@ -1,12 +1,19 @@
 const { Client } = require("@notionhq/client");
 const { NotionToMarkdown } = require("notion-to-md");
 const fs = require("fs");
+const crypto = require('crypto');
 
 const notion = new Client({ auth: process.env.NOTION_TOKEN });
-const n2m = new NotionToMarkdown({ notionClient: notion });
+const n2m = new NotionToMarkdown({ notionClient: notion, config: { convertImagesToBase64: true } }); // image to base64
 const dirName = './_static/post';
 
 (async () => {
+    const hash = async (buffer) => {
+        const sha256 = crypto.createHash('sha256');
+        sha256.update(buffer);
+        return sha256.digest('hex');
+    }
+
     // create directory
     if (!fs.existsSync(dirName)) {
         fs.mkdirSync(dirName, { recursive: true });
@@ -40,9 +47,21 @@ const dirName = './_static/post';
         // content
         const mdblocks = await n2m.pageToMarkdown(page.id);
         const mdString = frontmatter.concat('\n', n2m.toMarkdownString(mdblocks).parent);
+        const newTitle = title.replace(/ |\\|\/|\:|\*|\?|\"|\<|\>|\|/g, (m) => m !== ' ' ? btoa(m) : '_') + created;
+        const fileName = `${dirName}/${newTitle}.md`;
+
+        // exsists md file
+        if (fs.existsSync(fileName)) {
+            const notionHash = await hash(Buffer.from(mdString));
+            const repoHash = await hash(fs.readFileSync(fileName));
+
+            if (notionHash === repoHash) {
+                console.log('equal file content', fileName)
+                continue;
+            }
+        }
 
         // write md file 
-        const fileName = `${dirName}/${title.replace(/ /g, '_') + created}.md`;
         fs.writeFile(fileName, mdString, (err) => {
             if (err) console.log('fail wrting file', fileName)
             else console.log('success writing file', fileName)
