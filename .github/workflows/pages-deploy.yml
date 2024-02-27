@@ -14,13 +14,13 @@ jobs:
 
       # 환경을 Node.js로 설정
       - name: Use Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: "17"
+          node-version: "18"
 
       # node_modules가 변화가 있을 때만 사용하기 위해 캐쉬 액션
       - name: Cache node modules
-        uses: actions/cache@v2
+        uses: actions/cache@v4.0.0
         id: cache
         with:
           path: node_modules
